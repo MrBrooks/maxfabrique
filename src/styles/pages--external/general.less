@@ -1,0 +1,250 @@
+// GENERAL TAGS
+ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  li{
+    display: inline-block;
+  }
+}
+a{
+  color: inherit;
+  &:hover, &:focus{
+    color: @yellow;
+  }
+}
+body{
+  padding: 0 20px;
+  background-color: @gray-light;
+  color: @gray;
+  font-size: 16px;
+}
+h1,h2,h3,h4,h5,h6{
+  text-transform: uppercase;
+  margin: 0;
+}
+section{
+  margin-bottom: 40px;
+}
+img{
+  max-width: 100%;
+}
+input{
+  border-radius: 0;
+  box-shadow: none;
+  outline:none;
+  &:focus{
+    box-shadow: none;
+    outline:none;
+  }
+}
+footer{
+  background-color: #fff;
+  padding: 60px 0 70px;
+  font-size: 12px;
+  margin-left: -20px;
+  margin-right: -20px;
+  li{
+    display: block;
+    margin-bottom: 10px;
+  }
+  .phone, .email{
+    margin: 0;
+  }
+  .socials>div{
+    vertical-align: top;
+    margin-right: 5px;
+  }
+}
+//General Classes
+.cyan{
+  color: @cyan;
+}
+.magenta{
+  color: @magenta;
+}
+.yellow{
+  color: @yellow;
+}
+.trall{
+  transition: all 300ms cubic-bezier(0.55, 0.06, 0.68, 0.19);
+}
+.btn{
+  border: 0;
+  box-shadow: 0;
+  border-radius: 0;
+  outline: none;
+  appearance: none;
+  text-transform: uppercase;
+  color: white;
+  font-size: 16px;
+  width: 300px;
+  padding: 20px 0;
+  margin-bottom: 7px;
+  &:extend(.trall);
+  &--yellow{
+    background-color: @yellow;
+    &:hover{
+      background-color: @yellow-dark;
+    }
+  }
+  &--magenta{
+    background-color: @magenta;
+    &:hover{
+      background-color: @magenta-dark;
+    }
+  }
+}
+.input-text{
+  background-color: transparent;
+  border: 0;
+  box-shadow: 0;
+  outline:none;
+  border-bottom: 2px solid white;
+  color: white;
+}
+.menu{
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding-top: 35px;
+  padding-right: 80px;
+  padding-bottom: 15px;
+  width: ~"calc(100% / 12 * 11 - 40px)";
+  display: inline-flex;
+  justify-content: space-between;
+  color: white;
+  .active{
+    color: @yellow;
+  }
+  // a{
+  //   width: 15%;
+  //   display: inline-block;
+  // }
+  li{
+    &:hover{color: @yellow;}
+  }
+  &.dark{
+    background-color: rgb(53, 53, 53);
+    box-shadow: 0px 6px 5px 0px rgba(0, 0, 0, 0.17);
+    padding-top: 20px;
+  }
+}
+.full-bg{
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.clearfix{
+  clear: both;
+}
+
+//BOOTSTRAP RESET
+.row{
+  margin: 0;
+  padding: 0;
+}
+
+//OWL CAROUSEL CUSTOMIZE
+.owl-carousel{
+  position: relative;
+}
+.owl-nav{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  &>div{
+    width: 50px;
+    height: 50px;
+    background-color: @yellow;
+    padding: 15px 20px;
+    &:extend(.trall);
+    &:hover{
+      background-color: @yellow-dark;
+    }
+    &>div{
+      width: 15px;
+      height: 15px;
+      border-bottom: 2px solid white;
+      border-left: 2px solid white;
+      transform: rotate(45deg);
+      transform-origin: 50% 50%;
+    }
+  }
+  .owl-next{
+    padding-left: 13px;
+    &>div{
+      transform: rotate(-135deg);
+    }
+  }
+}
+
+//CUSTOMIZE ICONS
+.inst{
+  width: 31px;
+  height: 31px;
+  display: inline-block;
+  background-color: @yellow;
+  padding-top: 8px;
+  padding-left: 8px;
+  &:before{
+    content: '';
+    display: inline-block;
+    &:extend(.svg-sprite--inst);
+  }
+}
+.vk{
+  width: 31px;
+  height: 31px;
+  display: inline-block;
+  background-color: #3f7fac;
+  padding-top: 9px;
+  padding-left: 8px;
+  &:before{
+    content: '';
+    display: inline-block;
+    &:extend(.svg-sprite--vk);
+  }
+}
+.fb{
+  width: 31px;
+  height: 31px;
+  display: inline-block;
+  background-color: #13527e;
+  padding-top: 7px;
+  padding-left: 11px;
+  &:before{
+    content: '';
+    display: inline-block;
+    &:extend(.svg-sprite--fb);
+    width: 9px;
+  }
+}
+.twi{
+  width: 31px;
+  height: 31px;
+  display: inline-block;
+  background-color: #29cfe8;
+  padding-top: 8px;
+  padding-left: 8px;
+  &:before{
+    content: '';
+    display: inline-block;
+    &:extend(.svg-sprite--twi);
+  }
+}
+.youtube{
+  width: 31px;
+  height: 31px;
+  display: inline-block;
+  background-color: #b71206;
+  padding-top: 6px;
+  padding-left: 8px;
+  &:before{
+    content: '';
+    display: inline-block;
+    &:extend(.svg-sprite--youtube);
+  }
+}
