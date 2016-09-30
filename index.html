@@ -77,8 +77,8 @@
 <![endif]-->
 
         <header class="row">
-  <ul class="menu col-md-11 col-md-offset-1 dark">
-    <li class="active"><a href="#projects">Проекты</a></li>
+  <ul class="menu col-md-11 col-md-offset-1">
+    <li><a href="#projects">Проекты</a></li>
     <li><a href="#team">Команда</a></li>
     <li><a href="#repairs">Ремонт «под ключ»</a></li>
     <li><a href="#subscribe">Подписка</a></li>
@@ -105,13 +105,13 @@
           </div>
         </div>
         <div class="calc-block">
-          <div class="calc">
+          <div id="calc1" class="calc">
             <div class="quote">
               Рассчитайте стоимость дизайн-концепта, введите площадь квартиры или комнаты:
             </div>
-            <input type="text" class="input-text" placeholder="Например, 35">
-            <div id="calc-recult" class="yellow"><span>5 215</span> .-</div>
-            <button class="btn btn--yellow">Рассчитать</button>
+            <input type="number" class="input-text" placeholder="Например, 35">
+            <div id="calc-result" class="yellow"><span>5 215</span> .-</div>
+            <button id="eval" class="btn btn--yellow">Рассчитать</button>
             <button class="btn btn--magenta">Заказать проект</button>
           </div>
         </div>
@@ -227,17 +227,27 @@
         <div class="title cyan">Человек – основа своего <br>окружения</div>
         <div class="subtitle">Отражение личности в деталях <br>вашего интерьера</div>
         <div class="content-slider owl-carousel">
+          <div class="img"><img src="http://placehold.it/1280x500?text=1" alt=""></div>
+          <div class="img"><img src="http://placehold.it/1280x500?text=2" alt=""></div>
+          <div class="img"><img src="http://placehold.it/1280x500?text=3" alt=""></div>
+          <div class="img"><img src="http://placehold.it/1280x500?text=4" alt=""></div>
+          <!-- <div class="img"><img src="img/images/1280x500.png" alt=""></div>
+          <div class="img"><img src="img/images/1280x500.png" alt=""></div>
+          <div class="img"><img src="img/images/1280x500.png" alt=""></div> -->
+          <!-- <div class="img"><img src="img/images/1280x500.png" alt=""></div>
           <div class="img"><img src="img/images/1280x500.png" alt=""></div>
           <div class="img"><img src="img/images/1280x500.png" alt=""></div>
-          <div class="img"><img src="img/images/1280x500.png" alt=""></div>
-          <div class="img"><img src="img/images/1280x500.png" alt=""></div>
+          <div class="img"><img src="img/images/1280x500.png" alt=""></div> -->
         </div>
-        <div class="tabs">
-          <div class="tab active">
+        <div id="tabs-slider" class="tabs">
+          <div class="tab">
             <div class="title yellow">КУХНЯ ДЛЯ МАКСИМА</div>
             <div class="descr">Дом имеет два этажа, построен по индивидуальному проекту заказчика по технологии каркасно-панельного дома. Элементами и продвинутой электроникой управлением домом. Элементы стиля образуют из кусков гранита абстрактные скульптуры.</div>
           </div>
-          <div class="tab"></div>
+          <div class="tab">
+            <div class="title cyan">КУХНЯ ДЛЯ МАКСИМА</div>
+            <div class="descr">Дом имеет два этажа, построен по индивидуальному проекту заказчика по технологии каркасно-панельного дома. Элементами и продвинутой электроникой управлением домом. Элементы стиля образуют из кусков гранита абстрактные скульптуры.</div>
+          </div>
         </div>
         <button class="btn btn--magenta">Заказать проект</button>
       </div>
@@ -400,14 +410,14 @@
     <div class="col-md-11">
       <div class="block-content">
         <div class="title">Заказать <br> проект</div>
-        <div class="calc clearfix">
+        <div id="calc2" class="calc clearfix">
           <div class="quote">
             Рассчитайте стоимость дизайн-концепта, введите площадь квартиры или комнаты:
           </div>
           <div class="">
-            <input class="input-text" type="text" placeholder="Например, 35">
-            <div id="calc-recult" class="yellow"><span>5 215</span> .-</div>
-            <button class="btn btn--yellow">Рассчитать</button>
+            <input class="input-text" type="number" placeholder="Например, 35">
+            <div id="calc-result" class="yellow"><span>5 215</span> .-</div>
+            <button id="eval" class="btn btn--yellow">Рассчитать</button>
           </div>
         </div>
         <div class="book">
@@ -415,10 +425,10 @@
           <form class="form">
             <div class="form-title">Оставьте контактные данные для связи</div>
             <div class="field">
-              <input type="text">
+              <input type="text" placeholder="Имя">
             </div>
             <div class="field">
-              <input type="text">
+              <input name="phone" type="text" placeholder="Телефон для связи">
             </div>
             <div class="clearfix"></div>
             <button class="btn btn--magenta">Заказать проект</button>
@@ -495,11 +505,11 @@
         <li>г. Санкт-Петербург, ул. Петроградская, д. 56</li>
       </ul>
       <div class="socials">
-        <div class="vk"></div>
-        <div class="fb"></div>
-        <div class="inst"></div>
-        <div class="youtube"></div>
-        <div class="twi"></div>
+        <a href=""><div class="vk"></div></a>
+        <a href=""><div class="fb"></div></a>
+        <a href=""><div class="inst"></div></a>
+        <a href=""><div class="youtube"></div></a>
+        <a href=""><div class="twi"></div></a>
       </div>
     </div>
   </div>
