@@ -51,7 +51,7 @@ footer{
   .phone, .email{
     margin: 0;
   }
-  .socials>div{
+  .socials div{
     vertical-align: top;
     margin-right: 5px;
   }
@@ -116,6 +116,7 @@ footer{
   display: inline-flex;
   justify-content: space-between;
   color: white;
+  &:extend(.trall);
   .active{
     color: @yellow;
   }
@@ -189,10 +190,14 @@ footer{
   background-color: @yellow;
   padding-top: 8px;
   padding-left: 8px;
+  &:extend(.trall);
   &:before{
     content: '';
     display: inline-block;
     &:extend(.svg-sprite--inst);
+  }
+  &:hover{
+    background-color: @yellow-dark;
   }
 }
 .vk{
@@ -202,10 +207,14 @@ footer{
   background-color: #3f7fac;
   padding-top: 9px;
   padding-left: 8px;
+  &:extend(.trall);
   &:before{
     content: '';
     display: inline-block;
     &:extend(.svg-sprite--vk);
+  }
+  &:hover{
+    background-color: #2b638a;
   }
 }
 .fb{
@@ -215,11 +224,15 @@ footer{
   background-color: #13527e;
   padding-top: 7px;
   padding-left: 11px;
+  &:extend(.trall);
   &:before{
     content: '';
     display: inline-block;
     &:extend(.svg-sprite--fb);
     width: 9px;
+  }
+  &:hover{
+    background-color: #093758;
   }
 }
 .twi{
@@ -229,10 +242,14 @@ footer{
   background-color: #29cfe8;
   padding-top: 8px;
   padding-left: 8px;
+  &:extend(.trall);
   &:before{
     content: '';
     display: inline-block;
     &:extend(.svg-sprite--twi);
+  }
+  &:hover{
+    background-color: #16b6ce;
   }
 }
 .youtube{
@@ -242,9 +259,13 @@ footer{
   background-color: #b71206;
   padding-top: 6px;
   padding-left: 8px;
+  &:extend(.trall);
   &:before{
     content: '';
     display: inline-block;
     &:extend(.svg-sprite--youtube);
+  }
+  &:hover{
+    background-color: #910b01;
   }
 }

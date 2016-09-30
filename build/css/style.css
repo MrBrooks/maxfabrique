@@ -4097,7 +4097,7 @@ footer .email
 {
     margin: 0;
 }
-footer .socials > div
+footer .socials div
 {
     margin-right: 5px;
 
@@ -4117,7 +4117,13 @@ footer .socials > div
 }
 .trall,
 .btn,
-.owl-nav > div
+.menu,
+.owl-nav > div,
+.inst,
+.vk,
+.fb,
+.twi,
+.youtube
 {
     -webkit-transition: all 300ms cubic-bezier(.55, .06, .68, .19);
             transition: all 300ms cubic-bezier(.55, .06, .68, .19);
@@ -4293,6 +4299,10 @@ footer .socials > div
 
     content: '';
 }
+.inst:hover
+{
+    background-color: #dd8f15;
+}
 .vk
 {
     display: inline-block;
@@ -4309,6 +4319,10 @@ footer .socials > div
     display: inline-block;
 
     content: '';
+}
+.vk:hover
+{
+    background-color: #2b638a;
 }
 .fb
 {
@@ -4329,6 +4343,10 @@ footer .socials > div
 
     content: '';
 }
+.fb:hover
+{
+    background-color: #093758;
+}
 .twi
 {
     display: inline-block;
@@ -4346,6 +4364,10 @@ footer .socials > div
 
     content: '';
 }
+.twi:hover
+{
+    background-color: #16b6ce;
+}
 .youtube
 {
     display: inline-block;
@@ -4362,6 +4384,10 @@ footer .socials > div
     display: inline-block;
 
     content: '';
+}
+.youtube:hover
+{
+    background-color: #910b01;
 }
 #start
 {
@@ -4451,7 +4477,7 @@ footer .socials > div
 {
     text-decoration: underline;
 }
-.calc #calc-recult
+.calc #calc-result
 {
     font-size: 28px;
     font-weight: 700;
@@ -4625,8 +4651,6 @@ footer .socials > div
 }
 #clients .tab
 {
-    display: none;
-
     padding: 30px 0 40px;
 }
 #clients .tab.active
