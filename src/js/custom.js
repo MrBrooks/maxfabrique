@@ -8,6 +8,23 @@ $(document).ready(function() {
 
  /*    //= ./common/material-init.js */
  /*    //= ./common/google-analytics.js */
+ $.jMaskGlobals = {
+    maskElements: 'input,td,span,div',
+    dataMaskAttr: '*[data-mask]',
+    dataMask: true,
+    watchInterval: 300,
+    watchInputs: true,
+    watchDataMask: true,
+    byPassKeys: [9, 16, 17, 18, 36, 37, 38, 39, 40, 91],
+    translation: {
+        '0': {pattern: /\d/},
+        '9': {pattern: /\d/, optional: true},
+        '#': {pattern: /\d/, recursive: true},
+        'A': {pattern: /[a-zA-Z0-9]/},
+        'S': {pattern: /[a-zA-Z]/}
+    }
+  };
+
  $(".slider").owlCarousel({
    items: 1,
    nav: true,
@@ -33,6 +50,14 @@ $(document).ready(function() {
   calc: "#calc2"
  });
 
+ var scroll_anim = new AnimOnScroll({
+  selector: ".down-up",
+  visible: "visible"
+ });
+
+ // $('.money').mask("### ###", {reverse: true, optional: true});
+ // $.applyDataMask();
+
  $("input[name='phone']").mask('+7 (000) 000-00-00');
  
  content_slider.on("changed.owl.carousel",function(e){
@@ -56,7 +81,7 @@ $(document).ready(function() {
     {
       event: "scroll",
       actions: [
-        // scroll_anim.updateView,
+        scroll_anim.updateView,
         // video_control.update,
         // video_play.scrollControl,
         // econtenta_pixel.checkScrollConditions,
@@ -66,7 +91,7 @@ $(document).ready(function() {
     {
       event: "resize",
       actions: [
-        // anim_on_scroll.updateItems,
+        scroll_anim.updateItems,
         // full_height.update
       ]
     }
@@ -85,6 +110,8 @@ $(document).ready(function() {
       }
     }
   });
+
+  $(window).trigger('scroll');
 });
 
 function Calculator(options){
@@ -103,9 +130,10 @@ function Calculator(options){
       target = calc.find(opts.target);
 
   function init(){
+    target.mask("### ###", {reverse: true, optional: true});
     btn.on("click",function(){
       if(input.val() != ""){
-        target.text(parseInt(input.val())* opts.multi);
+        target.text(parseInt(input.val())* opts.multi).unmask().mask("### ###", {reverse: true, optional: true});
       }
     });
   }
@@ -133,7 +161,7 @@ function WindowUpdater(opts){
         }
       }
       //do smthng
-    },10);
+    },50);
   };
 
   self.onEvents = function(){
@@ -148,7 +176,8 @@ function WindowUpdater(opts){
 function AnimOnScroll(options){
   var def = {
     selector: ".scroll-anim",
-    visible: "visible"
+    visible: "visible",
+    delay: 300
   };
 
   var self = this;
@@ -183,6 +212,13 @@ function AnimOnScroll(options){
     return false;
   }
 
+  function filterVisible(){
+    items = _.reject(items,function(item){
+      return item.item.hasClass(opt.visible);
+    });
+    console.log(items.length);
+  }
+
   self.updateItems = function (){
     items = [];
     H = $(window).height();
@@ -196,13 +232,19 @@ function AnimOnScroll(options){
   };
 
   self.updateView = function(){
+    var counter = 0, mass = [];
     for(var i = 0; i < items.length; i++){
       if(!items[i].item.hasClass(opt.visible)){
         if(isVisible(items[i])){
-          items[i].item.addClass(opt.visible);
+          mass.push(i);
+          setTimeout(function(){
+            items[mass[counter++]].item.addClass(opt.visible);
+          },opt.delay*(counter++))
         }
       }
     }
+    setTimeout(filterVisible, opt.delay*counter+1000);
+    counter = 0;
   };
   self.updateItems();
 
@@ -259,7 +301,7 @@ function FloatingMenu(options){
       }
     }
     for (i = 0; i < offsets.length; i++){
-      if(i == offsets.length - 1 && scrollTop >= offsets[i] && scrollTop < offsets[i+1]){
+      if(i == offsets.length - 1 && scrollTop >= offsets[i]){
         $(links.get(i)).addClass("active");
       } else{
         if(scrollTop >= offsets[i] && scrollTop < offsets[i+1]){
