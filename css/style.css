@@ -8,6 +8,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+@import 'https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic';
 html
 {
     font-family: sans-serif;
@@ -4039,6 +4040,7 @@ a:focus
 }
 body
 {
+    font-family: 'PT Sans', sans-serif;
     font-size: 16px;
 
     padding: 0 20px;
@@ -4075,6 +4077,15 @@ input:focus
 {
     outline: none;
     box-shadow: none;
+}
+header
+{
+    position: fixed;
+    z-index: 1001;
+    top: 0;
+    left: 0;
+
+    width: 100%;
 }
 footer
 {
@@ -4173,13 +4184,16 @@ footer .socials div
     background-color: transparent;
     box-shadow: 0;
 }
+.logo
+{
+    padding-top: 40px;
+    padding-left: 30px;
+}
 .menu
 {
     font-size: 12px;
 
-    position: fixed;
     z-index: 1000;
-    top: 0;
 
     display: -webkit-inline-box;
     display: -webkit-inline-flex;
@@ -4525,6 +4539,7 @@ footer .socials div
 }
 .calc .quote
 {
+    max-width: 300px;
     margin-bottom: 20px;
 }
 .block-logo
@@ -4597,6 +4612,14 @@ footer .socials div
     margin-left: -60px;
     padding: 30px 0 20px;
 }
+.project .subtitle
+{
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    color: #e6a32a;
+}
 .project .scroll-block
 {
     overflow: auto;
@@ -4605,6 +4628,19 @@ footer .socials div
     padding: 40px;
 
     background-color: #fff;
+}
+.project .scroll-block::-webkit-scrollbar
+{
+    width: 12px;
+}
+.project .scroll-block::-webkit-scrollbar-thumb
+{
+    height: 100px;
+    max-height: 33%;
+}
+.project .scroll-block::-webkit-scrollbar-thumb
+{
+    background-color: #e6a32a;
 }
 .project .summary
 {
@@ -4630,6 +4666,10 @@ footer .socials div
 
     background-color: #e6a32a;
 }
+.project--magenta .scroll-block::-webkit-scrollbar-thumb
+{
+    background-color: #e0004d;
+}
 .project--magenta .summary .price
 {
     background-color: #c40144;
@@ -4646,6 +4686,14 @@ footer .socials div
 {
     background-color: #c40144;
 }
+.project--magenta .subtitle
+{
+    color: #e0004d;
+}
+.project--cyan .scroll-block::-webkit-scrollbar-thumb
+{
+    background-color: #00bfb3;
+}
 .project--cyan .summary .price
 {
     background-color: #00aa9f;
@@ -4654,11 +4702,15 @@ footer .socials div
 {
     background-color: #00bfb3;
 }
-.project .owl-nav > div
+.project--cyan .subtitle
+{
+    color: #00bfb3;
+}
+.project--cyan .owl-nav > div
 {
     background-color: #00bfb3;
 }
-.project .owl-nav > div:hover
+.project--cyan .owl-nav > div:hover
 {
     background-color: #00aa9f;
 }
@@ -4799,6 +4851,10 @@ footer .socials div
 
     text-transform: uppercase;
 }
+.people img
+{
+    width: 100%;
+}
 #repairs .rem
 {
     padding: 120px 18% 140px;
@@ -4841,6 +4897,8 @@ footer .socials div
 }
 #subscribe .label
 {
+    margin-bottom: 20px;
+
     text-transform: uppercase;
 }
 #subscribe input
@@ -4849,7 +4907,7 @@ footer .socials div
     padding: 17px 20px;
 
     border: 3px solid #e6a32a;
-    background-color: white;
+    background-color: transparent;
 }
 #art-concepts .block-content
 {
@@ -5071,4 +5129,46 @@ footer .socials div
     top: 0;
 
     opacity: 1;
+}
+.cyclic-anim
+{
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    height: 35px;
+    margin: 0;
+    padding: 0;
+
+    list-style-type: none;
+}
+.cyclic-anim li
+{
+    line-height: 1;
+
+    position: absolute;
+    top: 60px;
+    left: 0;
+
+    padding: 0;
+
+    -webkit-transition: all 500ms;
+            transition: all 500ms;
+
+    opacity: 0;
+}
+#start .cyclic-anim li:before
+{
+    display: none;
+}
+.cyclic-anim li.active
+{
+    top: 0;
+
+    opacity: 1;
+}
+.cyclic-anim li.prev
+{
+    top: -40px;
 }
