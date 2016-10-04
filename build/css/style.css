@@ -4447,7 +4447,7 @@ footer .socials div
     margin-bottom: 0;
     padding-top: 35px;
 
-    background-image: url(../img/images/1280x800.png);
+    background-image: url(../img/images/banner.jpg);
 }
 #start .block-content
 {
@@ -4506,6 +4506,13 @@ footer .socials div
 #start .descr
 {
     font-size: 14px;
+}
+#start li
+{
+    display: block;
+
+    max-width: 350px;
+    margin: 6px 0;
 }
 #start li:before
 {
