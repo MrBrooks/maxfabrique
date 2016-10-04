@@ -55,6 +55,13 @@ $(document).ready(function() {
   visible: "visible"
  });
 
+  var autoplay = new AutoPlay({
+    selector: ".cyclic-anim li",
+    class: 'active',
+    prev: 'prev',
+    pause: 3000
+  });
+  autoplay.start();
  // $('.money').mask("### ###", {reverse: true, optional: true});
  // $.applyDataMask();
 
@@ -76,6 +83,7 @@ $(document).ready(function() {
  });
 
  var menu = new FloatingMenu();
+ var logo = new Logo();
 
   var window_updater = new WindowUpdater([
     {
@@ -184,7 +192,7 @@ function AnimOnScroll(options){
   var opt = $.extend(def, options);
 
   var select = $(opt.selector);
-  var items = [];
+  var items = [], anim_on = false;
   var H = $(window).height(), if_mobile = $(window).width() < 768? true : false;
 
   
@@ -238,12 +246,16 @@ function AnimOnScroll(options){
         if(isVisible(items[i])){
           mass.push(i);
           setTimeout(function(){
-            items[mass[counter++]].item.addClass(opt.visible);
+            try{
+              items[mass[counter++]].item.addClass(opt.visible);
+            } catch (e){
+              // console.log(e);
+            }
           },opt.delay*(counter++))
         }
       }
     }
-    setTimeout(filterVisible, opt.delay*counter+1000);
+    setTimeout(filterVisible, opt.delay*counter+100);
     counter = 0;
   };
   self.updateItems();
@@ -328,3 +340,51 @@ function FloatingMenu(options){
   }
   init();
 }
+
+function AutoPlay(options){
+  var def = {
+    selector: ".auto-play",
+    class: 'active',
+    prev: 'prev',
+    pause: 7000
+  };
+  var self = this;
+  var opt = $.extend(def, options);
+
+  var items, timer, count, iter;
+
+  function init(){
+    items = $(opt.selector);
+    count = items.length;
+    iter = 0;
+    if(count > 0){
+      $(items.get(iter)).addClass(opt.class);
+    }
+  }
+
+  self.start = function (){
+    if (count > 0){
+      timer = setInterval(function(){
+          $(items).removeClass(opt.prev);
+          $(items.get(iter % count)).addClass(opt.prev);
+          $(items.get(++iter % count)).addClass(opt.class).siblings().removeClass(opt.class);
+      },opt.pause);
+    }
+  };
+
+  self.stop = function (){
+    clearInterval(timer);
+  };
+
+  init();
+}
+
+
+function Logo(){
+  var logo = Snap("#logo");
+  Snap.load("img/svg/logo.svg",function(fr){
+    console.log(fr);
+    logo.append(fr);
+  });
+}
+

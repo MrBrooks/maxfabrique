@@ -73,6 +73,7 @@
   }
   .quote{
     margin-bottom: 20px;
+    max-width: 300px;
   }
 }
 .block-logo{
@@ -132,11 +133,27 @@
     z-index: 1;
     position: relative;
   }
+  .subtitle{
+    text-transform: uppercase;
+    font-weight: 700;
+    color: @yellow;
+  }
   .scroll-block{
     background-color: #fff;
     padding: 40px;
     max-height: 300px;
     overflow: auto;
+    &::-webkit-scrollbar {
+    width: 12px;
+    // background-color: @red;
+    }
+    &::-webkit-scrollbar-thumb{
+        max-height: 33%;
+        height: 100px;
+    }
+    &::-webkit-scrollbar-thumb{
+      background-color: @yellow;
+    }
   }
   .summary{
     color: white;
@@ -156,6 +173,11 @@
   }
 
   &--magenta{
+    .scroll-block{
+      &::-webkit-scrollbar-thumb{
+        background-color: @magenta;
+      }
+    }
     .summary{
       .price{
         background-color: @magenta-dark;
@@ -170,8 +192,16 @@
         background-color: @magenta-dark;
       }
     }
+    .subtitle{
+      color: @magenta;
+    }
   }
   &--cyan{
+    .scroll-block{
+      &::-webkit-scrollbar-thumb{
+        background-color: @cyan;
+      }
+    }
     .summary{
       .price{
         background-color: @cyan-dark;
@@ -180,13 +210,17 @@
         background-color: @cyan;
       }
     }
-  }
-  .owl-nav>div{
-    background-color: @cyan;
-    &:hover{
-      background-color: @cyan-dark;
+    .subtitle{
+      color: @cyan;
+    }
+    .owl-nav>div{
+      background-color: @cyan;
+      &:hover{
+        background-color: @cyan-dark;
+      }
     }
   }
+  
   &:nth-child(even){
     .slider{
       float: right;
@@ -293,6 +327,9 @@
     text-transform: uppercase;
     font-weight: 700;
   }
+  img{
+    width: 100%;
+  }
 }
 #repairs{
   .rem{
@@ -328,9 +365,10 @@
   }
   .label{
     text-transform: uppercase;
+    margin-bottom: 20px;
   }
   input{
-    background-color: white;
+    background-color: transparent;
     border: 3px solid @yellow;
     padding: 17px 20px;
     width: 300px;
@@ -498,5 +536,34 @@
   &.visible{
     top: 0;
     opacity: 1;
+  }
+}
+
+.cyclic-anim{
+  position: relative;
+  display: block;
+  height: 35px;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  li{
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 0;
+    transition: all 500ms;
+    line-height: 1;
+    opacity: 0;
+    #start &:before{
+      display: none;
+    }
+    &.active{
+      top: 0;
+      opacity: 1;
+    }
+    &.prev{
+      top: -40px;
+    }
   }
 }
