@@ -12132,7 +12132,7 @@ if(1==arguments.length){if(d.is(a,"object")){for(var f in a)a[t](f)&&this.data(f
 /* Custom JavaScript files supervisor */
 /**************************************/
 $(window).load(function(){
-  $(window).trigger('scroll resize');
+  $(window).trigger('resize');
 });
 
 $(document).ready(function() {
@@ -12532,8 +12532,10 @@ function Logo(){
     sections.each(function(){
       offsets.push($(this).offset().top);
     });
+    // console.log(sections);
+    // console.log(offsets);
     // offsets.shift();
-    offsets.push(offsets[offsets.length-1]+3000);
+    offsets.push(offsets[offsets.length-1]+2000);
     if(offsets.length !== classes.length){
       console.log("Sections("+offsets.length+") and classes("+classes.length+") count don't match!");
     }
@@ -12553,14 +12555,17 @@ function Logo(){
     while (scrolltop >= offsets[i] && i <= offsets.length){
       ++i;
     }
-    console.log(i);
-    if(current_section != i){
+    // console.log(i);
+    // console.log(scrolltop);
+    // console.log(offsets);
+    if(current_section != --i){
       current_section = i;
       changeLogo();
     }
   }
 
   function onResize(){
+    console.log("Logo onresize");
     offsets = [];
     init();
   }
