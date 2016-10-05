@@ -90,7 +90,8 @@ var config = {
     host: 'localhost',
     port: 9000,
     injectChanges: true,
-    logPrefix: "App Front-End"
+    logPrefix: "App Front-End",
+    debug: true
 };
 
 /*********/
@@ -234,7 +235,7 @@ gulp.task('svg-sprite', function () {
         .pipe(svgspritesheet({
             cssPathNoSvg: '../img/sprites/svg/svg-sprite.png',
             cssPathSvg: '../img/sprites/svg/svg-sprite.svg',
-            padding: 0,
+            padding: 1,
             pixelBase: 16,
             positioning: 'packed',
             templateSrc: projectPath.src.svgSpriteTpl,
