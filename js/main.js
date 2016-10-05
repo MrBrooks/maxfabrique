@@ -12131,6 +12131,9 @@ if(1==arguments.length){if(d.is(a,"object")){for(var f in a)a[t](f)&&this.data(f
 /**************************************/
 /* Custom JavaScript files supervisor */
 /**************************************/
+$(window).load(function(){
+  $(window).trigger('scroll resize');
+});
 
 $(document).ready(function() {
 
@@ -12195,9 +12198,9 @@ $(document).ready(function() {
  // $('.money').mask("### ###", {reverse: true, optional: true});
  // $.applyDataMask();
 
- $("input[name='phone']").mask('+7 (000) 000-00-00');
- 
- content_slider.on("changed.owl.carousel",function(e){
+  $("input[name='phone']").mask('+7 (000) 000-00-00');
+
+  content_slider.on("changed.owl.carousel",function(e){
   // console.log(e);
   // console.log(e.item.index % e.item.count);
   // console.log(e.item.index);
@@ -12210,16 +12213,17 @@ $(document).ready(function() {
     tabs_slider.trigger("to.owl.carousel", [1, 300, true]);
   }
 
- });
+  });
 
- var menu = new FloatingMenu();
- var logo = new Logo();
+  var menu = new FloatingMenu();
+  var logo = new Logo();
 
   var window_updater = new WindowUpdater([
     {
       event: "scroll",
       actions: [
         scroll_anim.updateView,
+        logo.update,
         // video_control.update,
         // video_play.scrollControl,
         // econtenta_pixel.checkScrollConditions,
@@ -12230,6 +12234,7 @@ $(document).ready(function() {
       event: "resize",
       actions: [
         scroll_anim.updateItems,
+        logo.resize,
         // full_height.update
       ]
     }
@@ -12354,7 +12359,7 @@ function AnimOnScroll(options){
     items = _.reject(items,function(item){
       return item.item.hasClass(opt.visible);
     });
-    console.log(items.length);
+    // console.log(items.length);
   }
 
   self.updateItems = function (){
@@ -12511,9 +12516,67 @@ function AutoPlay(options){
 
 
 function Logo(){
-  var logo = Snap("#logo");
-  Snap.load("img/svg/logo.svg",function(fr){
-    console.log(fr);
-    logo.append(fr);
-  });
+  var logo = $("#logo"), logo_el = $("#logo-element"), sections = $("section"), offsets = [];
+  var current_section = 0, classes = ["","svg-sprite--symbols-01","svg-sprite--symbols-02","svg-sprite--symbols-03","svg-sprite--symbols-04","svg-sprite--symbols-05","svg-sprite--symbols-06","svg-sprite--symbols-07","svg-sprite--symbols-08","svg-sprite--symbols-09","svg-sprite--symbols-10"];
+
+  var delay = 350;
+
+  this.update = function(){
+    onScroll();
+  };
+  this.resize = function(){
+    onResize();
+  };
+
+  function init(){
+    sections.each(function(){
+      offsets.push($(this).offset().top);
+    });
+    // offsets.shift();
+    offsets.push(offsets[offsets.length-1]+3000);
+    if(offsets.length !== classes.length){
+      console.log("Sections("+offsets.length+") and classes("+classes.length+") count don't match!");
+    }
+  }
+  function logoUpdate(index){
+    logo_el.attr("class", classes[i]);
+    if(index === 0){
+      logo.attr("class", "svg-sprite--logo-white");
+    } else{
+      logo.attr("class", "svg-sprite--logo");
+    }
+  }
+
+  function onScroll(){
+    var scrolltop = $(window).scrollTop();
+    i = 0;
+    while (scrolltop >= offsets[i] && i <= offsets.length){
+      ++i;
+    }
+    console.log(i);
+    if(current_section != i){
+      current_section = i;
+      changeLogo();
+    }
+  }
+
+  function onResize(){
+    offsets = [];
+    init();
+  }
+  function logoOut(){
+    logo_el.removeClass("in").addClass("out");
+  }
+  function logoIn(){
+    logoUpdate(current_section);
+    logo_el.removeClass("out").addClass("in");
+  }
+  function changeLogo(){
+    // logo_el.addClass("out");
+    logoOut();
+    _.delay(logoIn, delay);
+  }
+  init();
+
+  
 }

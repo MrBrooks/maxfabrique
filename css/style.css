@@ -3740,157 +3740,157 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
 
 .retina-sprites(@retina-groups);
 */
-.svg-sprite--logos-01
+.svg-sprite--logo-white
 {
     width: 57px;
     height: 120px;
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: 0 0;
-    background-size: 388px 239px;
+    background-position: -1px -1px;
+    background-size: 237px 226px;
 }
-.no-svg .svg-sprite--logos-01
+.no-svg .svg-sprite--logo-white
 {
     background-image: url('../img/sprites/svg/svg-sprite.png');
 }
-.svg-sprite--logos-09
-{
-    width: 71px;
-    height: 119px;
-
-    background-image: url('../img/sprites/svg/svg-sprite.svg');
-    background-repeat: no-repeat;
-    background-position: -57px 0;
-    background-size: 388px 239px;
-}
-.no-svg .svg-sprite--logos-09
-{
-    background-image: url('../img/sprites/svg/svg-sprite.png');
-}
-.svg-sprite--logos-06
-{
-    width: 69px;
-    height: 119px;
-
-    background-image: url('../img/sprites/svg/svg-sprite.svg');
-    background-repeat: no-repeat;
-    background-position: -127px 0;
-    background-size: 388px 239px;
-}
-.no-svg .svg-sprite--logos-06
-{
-    background-image: url('../img/sprites/svg/svg-sprite.png');
-}
-.svg-sprite--logos-05
+.svg-sprite--logo
 {
     width: 68px;
     height: 119px;
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -196px 0;
-    background-size: 388px 239px;
+    background-position: -59px -1px;
+    background-size: 237px 226px;
 }
-.no-svg .svg-sprite--logos-05
+.no-svg .svg-sprite--logo
 {
     background-image: url('../img/sprites/svg/svg-sprite.png');
 }
-.svg-sprite--logos-12
+.svg-sprite--logos-footer
 {
     width: 68px;
     height: 119px;
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: 0 -120px;
-    background-size: 388px 239px;
+    background-position: -127px -1px;
+    background-size: 237px 226px;
 }
-.no-svg .svg-sprite--logos-12
+.no-svg .svg-sprite--logos-footer
 {
     background-image: url('../img/sprites/svg/svg-sprite.png');
 }
-.svg-sprite--logos-11
+.svg-sprite--symbols-07
 {
-    width: 68px;
-    height: 119px;
+    width: 32px;
+    height: 52px;
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -68px -120px;
-    background-size: 388px 239px;
+    background-position: -1px -122px;
+    background-size: 237px 226px;
 }
-.no-svg .svg-sprite--logos-11
+.no-svg .svg-sprite--symbols-07
 {
     background-image: url('../img/sprites/svg/svg-sprite.png');
 }
-.svg-sprite--logos-02
+.svg-sprite--symbols-08
 {
-    width: 67px;
-    height: 119px;
+    width: 47px;
+    height: 51px;
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -135px -120px;
-    background-size: 388px 239px;
+    background-position: -34px -122px;
+    background-size: 237px 226px;
 }
-.no-svg .svg-sprite--logos-02
+.no-svg .svg-sprite--symbols-08
 {
     background-image: url('../img/sprites/svg/svg-sprite.png');
 }
-.svg-sprite--logos-04
+.svg-sprite--symbols-06
 {
-    width: 63px;
-    height: 119px;
+    width: 32px;
+    height: 49px;
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -263px 0;
-    background-size: 388px 239px;
+    background-position: -81px -122px;
+    background-size: 237px 226px;
 }
-.no-svg .svg-sprite--logos-04
+.no-svg .svg-sprite--symbols-06
 {
     background-image: url('../img/sprites/svg/svg-sprite.png');
 }
-.svg-sprite--logos-03
+.svg-sprite--symbols-05
 {
-    width: 63px;
-    height: 119px;
+    width: 45px;
+    height: 39px;
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -263px -119px;
-    background-size: 388px 239px;
+    background-position: -114px -122px;
+    background-size: 237px 226px;
 }
-.no-svg .svg-sprite--logos-03
+.no-svg .svg-sprite--symbols-05
 {
     background-image: url('../img/sprites/svg/svg-sprite.png');
 }
-.svg-sprite--logos-10
+.svg-sprite--symbols-04
 {
-    width: 63px;
-    height: 119px;
+    width: 42px;
+    height: 43px;
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -326px 0;
-    background-size: 388px 239px;
+    background-position: -195px -1px;
+    background-size: 237px 226px;
 }
-.no-svg .svg-sprite--logos-10
+.no-svg .svg-sprite--symbols-04
 {
     background-image: url('../img/sprites/svg/svg-sprite.png');
 }
-.svg-sprite--logos-07
+.svg-sprite--symbols-10
 {
-    width: 62px;
-    height: 119px;
+    width: 40px;
+    height: 40px;
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -326px -119px;
-    background-size: 388px 239px;
+    background-position: -195px -45px;
+    background-size: 237px 226px;
 }
-.no-svg .svg-sprite--logos-07
+.no-svg .svg-sprite--symbols-10
+{
+    background-image: url('../img/sprites/svg/svg-sprite.png');
+}
+.svg-sprite--symbols-01
+{
+    width: 40px;
+    height: 40px;
+
+    background-image: url('../img/sprites/svg/svg-sprite.svg');
+    background-repeat: no-repeat;
+    background-position: -195px -86px;
+    background-size: 237px 226px;
+}
+.no-svg .svg-sprite--symbols-01
+{
+    background-image: url('../img/sprites/svg/svg-sprite.png');
+}
+.svg-sprite--symbols-09
+{
+    width: 39px;
+    height: 39px;
+
+    background-image: url('../img/sprites/svg/svg-sprite.svg');
+    background-repeat: no-repeat;
+    background-position: -195px -127px;
+    background-size: 237px 226px;
+}
+.no-svg .svg-sprite--symbols-09
 {
     background-image: url('../img/sprites/svg/svg-sprite.png');
 }
@@ -3901,10 +3901,38 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -202px -120px;
-    background-size: 388px 239px;
+    background-position: -159px -122px;
+    background-size: 237px 226px;
 }
 .no-svg .svg-sprite--arrow
+{
+    background-image: url('../img/sprites/svg/svg-sprite.png');
+}
+.svg-sprite--symbols-03
+{
+    width: 26px;
+    height: 32px;
+
+    background-image: url('../img/sprites/svg/svg-sprite.svg');
+    background-repeat: no-repeat;
+    background-position: -1px -175px;
+    background-size: 237px 226px;
+}
+.no-svg .svg-sprite--symbols-03
+{
+    background-image: url('../img/sprites/svg/svg-sprite.png');
+}
+.svg-sprite--symbols-02
+{
+    width: 26px;
+    height: 26px;
+
+    background-image: url('../img/sprites/svg/svg-sprite.svg');
+    background-repeat: no-repeat;
+    background-position: -28px -175px;
+    background-size: 237px 226px;
+}
+.no-svg .svg-sprite--symbols-02
 {
     background-image: url('../img/sprites/svg/svg-sprite.png');
 }
@@ -3916,8 +3944,8 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -216px -120px;
-    background-size: 388px 239px;
+    background-position: -174px -122px;
+    background-size: 237px 226px;
 }
 .no-svg .svg-sprite--youtube
 {
@@ -3931,8 +3959,8 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -231px -120px;
-    background-size: 388px 239px;
+    background-position: -174px -142px;
+    background-size: 237px 226px;
 }
 .no-svg .svg-sprite--twi
 {
@@ -3946,8 +3974,8 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -216px -139px;
-    background-size: 388px 239px;
+    background-position: -55px -175px;
+    background-size: 237px 226px;
 }
 .no-svg .svg-sprite--vk
 {
@@ -3961,8 +3989,8 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -202px -156px;
-    background-size: 388px 239px;
+    background-position: -1px -208px;
+    background-size: 237px 226px;
 }
 .no-svg .svg-sprite--fb
 {
@@ -3976,8 +4004,8 @@ The `.retina-sprites` mixin generates a CSS rule and media query for retina grou
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -211px -156px;
-    background-size: 388px 239px;
+    background-position: -12px -208px;
+    background-size: 237px 226px;
 }
 .no-svg .svg-sprite--inst
 {
@@ -4186,8 +4214,106 @@ footer .socials div
 }
 .logo
 {
+    z-index: 1001;
+
     padding-top: 40px;
     padding-left: 30px;
+}
+.logo > div
+{
+    position: relative;
+}
+.logo #logo-element
+{
+    -webkit-transition: -webkit-transform 300ms;
+            transition:         transform 300ms;
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: 50% 50%;
+        -ms-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+}
+.logo #logo-element.out
+{
+    -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+            transform: scale(0);
+}
+.logo #logo-element.in
+{
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
+}
+.svg-sprite--logo
+{
+    position: relative;
+    z-index: 1001;
+}
+.svg-sprite--logo + #logo-element
+{
+    position: absolute;
+}
+.svg-sprite--logo + #logo-element.svg-sprite--symbols-01
+{
+    z-index: 1002;
+    bottom: 20px;
+    left: 26px;
+}
+.svg-sprite--logo + #logo-element.svg-sprite--symbols-02
+{
+    z-index: 1002;
+    bottom: 12px;
+    left: 35px;
+}
+.svg-sprite--logo + #logo-element.svg-sprite--symbols-03
+{
+    z-index: 1002;
+    bottom: 15px;
+    left: 33px;
+}
+.svg-sprite--logo + #logo-element.svg-sprite--symbols-04
+{
+    z-index: 1000;
+    bottom: 17px;
+    left: 26px;
+}
+.svg-sprite--logo + #logo-element.svg-sprite--symbols-05
+{
+    z-index: 1000;
+    bottom: 12px;
+    left: 24px;
+}
+.svg-sprite--logo + #logo-element.svg-sprite--symbols-06
+{
+    z-index: 1000;
+    bottom: 4px;
+    left: 29px;
+}
+.svg-sprite--logo + #logo-element.svg-sprite--symbols-07
+{
+    z-index: 1000;
+    bottom: 6px;
+    left: 26px;
+}
+.svg-sprite--logo + #logo-element.svg-sprite--symbols-08
+{
+    z-index: 1000;
+    bottom: 13px;
+    left: 24px;
+}
+.svg-sprite--logo + #logo-element.svg-sprite--symbols-09
+{
+    z-index: 1000;
+    bottom: 15px;
+    left: 24px;
+}
+.svg-sprite--logo + #logo-element.svg-sprite--symbols-10
+{
+    z-index: 1000;
+    bottom: 17px;
+    left: 29px;
 }
 .menu
 {
