@@ -8,7 +8,6 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
-@import 'https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic';
 html
 {
     font-family: sans-serif;
@@ -4076,6 +4075,13 @@ body
     color: #63666a;
     background-color: #f5f5f5;
 }
+@media screen and (max-width: 767px)
+{
+    body
+    {
+        padding: 0;
+    }
+}
 h1,
 h2,
 h3,
@@ -4125,11 +4131,36 @@ footer
 
     background-color: #fff;
 }
+@media screen and (max-width: 767px)
+{
+    footer
+    {
+        font-size: 14px;
+
+        margin: 0;
+        padding: 40px 60px;
+        padding-right: 30px;
+    }
+}
 footer li
 {
     display: block;
 
     margin-bottom: 10px;
+}
+footer .logo
+{
+    display: block;
+
+    padding: 0;
+    padding-left: 20px;
+}
+@media screen and (max-width: 767px)
+{
+    footer .logo
+    {
+        margin-bottom: 20px;
+    }
 }
 footer .phone,
 footer .email
@@ -4142,7 +4173,37 @@ footer .socials div
 
     vertical-align: top;
 }
+@media screen and (max-width: 767px)
+{
+    footer .socials div
+    {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+@media screen and (max-width: 767px)
+{
+    footer .site-map
+    {
+        display: none;
+    }
+}
+.mobile-logo
+{
+    display: none;
+}
+@media screen and (max-width: 767px)
+{
+    .mobile-logo
+    {
+        display: block;
+    }
+}
 .cyan
+{
+    color: #00bfb3;
+}
+.cyan:hover
 {
     color: #00bfb3;
 }
@@ -4150,7 +4211,15 @@ footer .socials div
 {
     color: #e0004d;
 }
+.magenta:hover
+{
+    color: #e0004d;
+}
 .yellow
+{
+    color: #e6a32a;
+}
+.yellow:hover
 {
     color: #e6a32a;
 }
@@ -4187,6 +4256,13 @@ footer .socials div
        -moz-appearance: none;
             appearance: none;
 }
+@media screen and (max-width: 767px)
+{
+    .btn
+    {
+        width: 100%;
+    }
+}
 .btn--yellow
 {
     background-color: #e6a32a;
@@ -4202,6 +4278,14 @@ footer .socials div
 .btn--magenta:hover
 {
     background-color: #c40144;
+}
+.btn--cyan
+{
+    background-color: #00bfb3;
+}
+.btn--cyan:hover
+{
+    background-color: #00bfb3;
 }
 .input-text
 {
@@ -4245,6 +4329,18 @@ footer .socials div
     -webkit-transform: scale(1);
         -ms-transform: scale(1);
             transform: scale(1);
+}
+@media screen and (max-width: 767px)
+{
+    .logo
+    {
+        display: none;
+    }
+}
+.block-content
+{
+    max-width: 1024px;
+    margin: auto;
 }
 .svg-sprite--logo
 {
@@ -4338,6 +4434,13 @@ footer .socials div
     -ms-flex-pack: justify;
             justify-content: space-between;
 }
+@media screen and (max-width: 767px)
+{
+    .menu
+    {
+        display: none;
+    }
+}
 .menu .active
 {
     color: #e6a32a;
@@ -4395,7 +4498,8 @@ footer .socials div
     padding-top: 20px;
 }
 .full-bg,
-#start
+#start,
+#start .slogan
 {
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -4568,12 +4672,33 @@ footer .socials div
 {
     background-color: #910b01;
 }
+@media screen and (max-width: 767px)
+{
+    .col-md-11
+    {
+        padding: 0;
+    }
+}
 #start
 {
     margin-bottom: 0;
     padding-top: 35px;
 
     background-image: url(../img/images/banner.jpg);
+}
+@media screen and (max-width: 767px)
+{
+    #start
+    {
+        margin-bottom: 180px;
+        padding-top: 0;
+
+        background-image: none;
+    }
+}
+#start .col-md-11
+{
+    padding: 0;
 }
 #start .block-content
 {
@@ -4588,6 +4713,13 @@ footer .socials div
 
     content: '';
 }
+@media screen and (max-width: 767px)
+{
+    #start .block-content
+    {
+        padding: 0;
+    }
+}
 #start .block-content > div
 {
     float: left;
@@ -4595,9 +4727,35 @@ footer .socials div
     width: 50%;
     padding-right: 30px;
 }
+@media screen and (max-width: 767px)
+{
+    #start .block-content > div
+    {
+        width: 100%;
+        padding: 30px 15px;
+    }
+}
+@media screen and (max-width: 767px)
+{
+    #start .slogan
+    {
+        padding: 30px 15px;
+
+        background-image: url(../img/images/banner.jpg);
+    }
+}
 #start .calc-block
 {
     padding-left: 30px;
+}
+@media screen and (max-width: 767px)
+{
+    #start .calc-block
+    {
+        padding: 0;
+
+        color: #63666a;
+    }
 }
 #start .block-logo
 {
@@ -4609,6 +4767,13 @@ footer .socials div
     padding: 0;
 
     text-align: center;
+}
+@media screen and (max-width: 767px)
+{
+    #start div.go-down
+    {
+        display: none;
+    }
 }
 #start div.go-down div
 {
@@ -4675,10 +4840,6 @@ footer .socials div
     max-width: 300px;
     margin-bottom: 20px;
 }
-.block-logo
-{
-    padding-top: 35px;
-}
 #about .block-content
 {
     position: relative;
@@ -4689,6 +4850,13 @@ footer .socials div
     padding-bottom: 60px;
 
     background-color: #fff;
+}
+@media screen and (max-width: 767px)
+{
+    #about .block-content
+    {
+        padding: 30px 15px;
+    }
 }
 #about .title
 {
@@ -4703,6 +4871,14 @@ footer .socials div
     color: white;
     background-color: #e6a32a;
 }
+#about .title.down-up
+{
+    top: 20px;
+}
+#about .title.down-up.visible
+{
+    top: -20px;
+}
 #about .descr
 {
     font-weight: 300;
@@ -4716,9 +4892,20 @@ footer .socials div
     margin-bottom: 30px;
     padding-left: 80px;
 }
+#projects .row > div
+{
+    padding: 0;
+}
 .project
 {
     margin-bottom: 60px;
+}
+@media screen and (max-width: 767px)
+{
+    .project
+    {
+        margin-bottom: 25px;
+    }
 }
 .project:after
 {
@@ -4736,6 +4923,17 @@ footer .socials div
 {
     width: 60%;
 }
+@media screen and (max-width: 767px)
+{
+    .project .slider
+    {
+        width: 100%;
+    }
+}
+.project .slider .img
+{
+    height: 100%;
+}
 .project .info
 {
     position: relative;
@@ -4745,6 +4943,15 @@ footer .socials div
     margin-left: -60px;
     padding: 30px 0 20px;
 }
+@media screen and (max-width: 767px)
+{
+    .project .info
+    {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+}
 .project .subtitle
 {
     font-weight: 700;
@@ -4752,6 +4959,63 @@ footer .socials div
     text-transform: uppercase;
 
     color: #e6a32a;
+}
+.project .mobile-title
+{
+    display: none;
+
+    text-transform: uppercase;
+}
+@media screen and (max-width: 767px)
+{
+    .project .mobile-title
+    {
+        font-weight: 700;
+
+        display: block;
+
+        padding: 27px 0;
+
+        text-align: center;
+        letter-spacing: 1px;
+    }
+}
+.project .mobile-popup-open
+{
+    display: none;
+}
+.project .mobile-popup-open:after
+{
+    position: absolute;
+    top: 26px;
+    right: 90px;
+
+    display: block;
+
+    width: 10px;
+    height: 10px;
+
+    content: '';
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-transform-origin: 50% 50%;
+        -ms-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+}
+@media screen and (max-width: 767px)
+{
+    .project .mobile-popup-open
+    {
+        position: relative;
+
+        display: block;
+
+        width: 100%;
+    }
 }
 .project .scroll-block
 {
@@ -4761,6 +5025,13 @@ footer .socials div
     padding: 40px;
 
     background-color: #fff;
+}
+@media screen and (max-width: 767px)
+{
+    .project .scroll-block
+    {
+        display: none;
+    }
 }
 .project .scroll-block::-webkit-scrollbar
 {
@@ -4792,6 +5063,14 @@ footer .socials div
     padding: 20px 40px;
 
     background-color: #dd8f15;
+}
+@media screen and (max-width: 767px)
+{
+    .project .summary .descr,
+    .project .summary .price
+    {
+        padding: 20px;
+    }
 }
 .project .summary .descr
 {
@@ -4900,6 +5179,15 @@ footer .socials div
 
     text-align: right;
 }
+@media screen and (max-width: 767px)
+{
+    #clients .tab .title
+    {
+        width: 100%;
+
+        text-align: left;
+    }
+}
 #clients .tab .descr
 {
     font-weight: 300;
@@ -4910,9 +5198,24 @@ footer .socials div
     width: 60%;
     padding-right: 50px;
 }
+@media screen and (max-width: 767px)
+{
+    #clients .tab .descr
+    {
+        width: 100%;
+        padding-right: 0;
+    }
+}
 #clients .btn
 {
     margin-left: 40%;
+}
+@media screen and (max-width: 767px)
+{
+    #clients .btn
+    {
+        margin: 0;
+    }
 }
 .content-slider .owl-nav
 {
@@ -4933,14 +5236,49 @@ footer .socials div
 
     margin: auto;
 }
+@media screen and (max-width: 767px)
+{
+    #team .btn
+    {
+        width: 200px;
+    }
+}
+@media screen and (max-width: 767px)
+{
+    #team .btn-container
+    {
+        padding: 0 15px;
+    }
+}
 #team .title.first
 {
     margin-bottom: 50px;
+}
+@media screen and (max-width: 767px)
+{
+    #team .title.first
+    {
+        padding: 0 15px;
+    }
 }
 #team .title.second
 {
     margin-top: 20px;
     margin-bottom: 30px;
+}
+@media screen and (max-width: 767px)
+{
+    #team .title.second
+    {
+        padding: 0 15px;
+    }
+}
+@media screen and (max-width: 767px)
+{
+    #team .col-md-11
+    {
+        padding: 0;
+    }
 }
 .people
 {
@@ -4968,6 +5306,14 @@ footer .socials div
 
     background-color: white;
 }
+@media screen and (max-width: 767px)
+{
+    .people .item
+    {
+        width: 100%;
+        margin-bottom: 0;
+    }
+}
 .people .item > div
 {
     margin-bottom: 20px;
@@ -4988,6 +5334,13 @@ footer .socials div
 {
     width: 100%;
 }
+@media screen and (max-width: 767px)
+{
+    #repairs
+    {
+        margin: 0;
+    }
+}
 #repairs .rem
 {
     padding: 120px 18% 140px;
@@ -4995,9 +5348,23 @@ footer .socials div
     color: white;
     background-color: #00bfb3;
 }
+@media screen and (max-width: 767px)
+{
+    #repairs .rem
+    {
+        padding: 50px 15px;
+    }
+}
 #repairs .gotoplace
 {
     padding: 90px 9% 90px;
+}
+@media screen and (max-width: 767px)
+{
+    #repairs .gotoplace
+    {
+        padding: 50px 15px;
+    }
 }
 #subscribe .title
 {
@@ -5010,9 +5377,25 @@ footer .socials div
     color: white;
     background-color: #e6a32a;
 }
+@media screen and (max-width: 767px)
+{
+    #subscribe .title
+    {
+        width: 100%;
+
+        text-align: center;
+    }
+}
 #subscribe .subscribe-form
 {
     padding: 60px 8% 10px;
+}
+@media screen and (max-width: 767px)
+{
+    #subscribe .subscribe-form
+    {
+        padding: 30px 15px 0;
+    }
 }
 #subscribe .form-title
 {
@@ -5042,6 +5425,21 @@ footer .socials div
     border: 3px solid #e6a32a;
     background-color: transparent;
 }
+@media screen and (max-width: 767px)
+{
+    #subscribe input
+    {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+@media screen and (max-width: 767px)
+{
+    #art-concepts
+    {
+        margin: 0;
+    }
+}
 #art-concepts .block-content
 {
     background-color: #3d3935;
@@ -5060,6 +5458,14 @@ footer .socials div
 
     padding: 40px 40px 25px;
 }
+@media screen and (max-width: 767px)
+{
+    #art-concepts .title
+    {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
 #art-concepts .subtitle
 {
     font-size: 20px;
@@ -5072,6 +5478,16 @@ footer .socials div
 
     text-transform: uppercase;
 }
+@media screen and (max-width: 767px)
+{
+    #art-concepts .subtitle
+    {
+        width: 100%;
+        margin-bottom: 20px;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
 #art-concepts .descr
 {
     float: left;
@@ -5081,6 +5497,16 @@ footer .socials div
 
     color: white;
 }
+@media screen and (max-width: 767px)
+{
+    #art-concepts .descr
+    {
+        width: 100%;
+        padding-right: 15px;
+        padding-bottom: 30px;
+        padding-left: 15px;
+    }
+}
 #art-concepts .slider
 {
     padding: 0;
@@ -5088,6 +5514,13 @@ footer .socials div
 #art-concepts p:first-child
 {
     margin-top: 0;
+}
+@media screen and (max-width: 767px)
+{
+    #instagram
+    {
+        margin: 0;
+    }
 }
 #instagram .title
 {
@@ -5101,16 +5534,42 @@ footer .socials div
     color: white;
     background-color: #e0004d;
 }
+@media screen and (max-width: 767px)
+{
+    #instagram .title
+    {
+        float: none;
+
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}
 #instagram .content
 {
     max-width: 70%;
     padding-top: 100px;
+}
+@media screen and (max-width: 767px)
+{
+    #instagram .content
+    {
+        width: 100%;
+        max-width: none;
+        padding-top: 0;
+    }
 }
 #instagram .content > div
 {
     padding: 80px 12%;
 
     background-color: white;
+}
+@media screen and (max-width: 767px)
+{
+    #instagram .content > div
+    {
+        padding: 50px 15px;
+    }
 }
 #instagram .subtitle
 {
@@ -5125,12 +5584,27 @@ footer .socials div
 {
     margin-right: 10px;
 }
+@media screen and (max-width: 767px)
+{
+    #contacts
+    {
+        margin-bottom: 5px;
+    }
+}
 #contacts .block-content
 {
     margin-top: 45px;
     padding: 0 8% 60px;
 
     background-color: white;
+}
+@media screen and (max-width: 767px)
+{
+    #contacts .block-content
+    {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
 }
 #contacts .title
 {
@@ -5143,6 +5617,14 @@ footer .socials div
     color: white;
     background-color: #e0004d;
 }
+@media screen and (max-width: 767px)
+{
+    #contacts .title
+    {
+        width: 100%;
+        padding: 20px 40px;
+    }
+}
 #contacts .calc
 {
     margin-bottom: 50px;
@@ -5152,6 +5634,15 @@ footer .socials div
     float: left;
 
     width: 50%;
+}
+@media screen and (max-width: 767px)
+{
+    #contacts .calc > div
+    {
+        float: none;
+
+        width: 100%;
+    }
 }
 #contacts .calc .quote
 {
@@ -5174,6 +5665,15 @@ footer .socials div
 
     width: 50%;
     margin: 0;
+}
+@media screen and (max-width: 767px)
+{
+    #contacts .calc #calc-recult
+    {
+        float: none;
+
+        width: 100%;
+    }
 }
 #contacts .calc .btn
 {
@@ -5200,6 +5700,15 @@ footer .socials div
 
     width: 50%;
 }
+@media screen and (max-width: 767px)
+{
+    #contacts .book .form
+    {
+        float: none;
+
+        width: 100%;
+    }
+}
 #contacts .book .form input
 {
     width: 300px;
@@ -5209,11 +5718,27 @@ footer .socials div
     border: 3px solid #e6a32a;
     background-color: white;
 }
+@media screen and (max-width: 767px)
+{
+    #contacts .book .form input
+    {
+        width: 100%;
+    }
+}
 #contacts .book .contact
 {
     float: right;
 
     width: 50%;
+}
+@media screen and (max-width: 767px)
+{
+    #contacts .book .contact
+    {
+        float: none;
+
+        width: 100%;
+    }
 }
 #contacts .book .contact > div
 {
@@ -5243,12 +5768,82 @@ footer .socials div
 {
     margin-bottom: 10px;
 }
+@media screen and (max-width: 767px)
+{
+    #article
+    {
+        margin-bottom: 10px;
+    }
+}
+#article .block-content
+{
+    max-height: 600px;
+
+    background-color: #fff;
+}
+#article .block-content > div
+{
+    display: inline-block;
+
+    vertical-align: top;
+}
+@media screen and (max-width: 767px)
+{
+    #article .block-content
+    {
+        max-height: none;
+    }
+}
+#article .pic img
+{
+    max-height: 600px;
+}
+@media screen and (max-width: 767px)
+{
+    #article .pic
+    {
+        width: 100%;
+    }
+}
+#article .content
+{
+    max-width: 50%;
+    padding: 70px 80px 0;
+}
+@media screen and (max-width: 767px)
+{
+    #article .content
+    {
+        max-width: none;
+        padding: 30px 15px;
+    }
+}
+#article .title
+{
+    font-size: 20px;
+
+    margin-bottom: 30px;
+}
+#article .descr
+{
+    margin-bottom: 20px;
+}
+#article a
+{
+    display: block;
+
+    margin-bottom: 20px;
+}
+#article .vk
+{
+    margin-right: 10px;
+    padding-top: 5px;
+    padding-left: 7px;
+}
 .down-up
 {
     position: relative;
     top: 100px;
-
-    overflow: hidden;
 
     -webkit-transition: all 1500ms cubic-bezier(.22, .61, .36, 1);
             transition: all 1500ms cubic-bezier(.22, .61, .36, 1);
