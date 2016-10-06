@@ -11,7 +11,7 @@ $(document).ready(function() {
 
  /*    //= ./common/material-init.js */
  /*    //= ./common/google-analytics.js */
- $.jMaskGlobals = {
+  $.jMaskGlobals = {
     maskElements: 'input,td,span,div',
     dataMaskAttr: '*[data-mask]',
     dataMask: true,
@@ -28,25 +28,34 @@ $(document).ready(function() {
     }
   };
 
- $(".slider").owlCarousel({
+  $(".slider").owlCarousel({
    items: 1,
    nav: true,
    dots: false,
    loop: true,
    navText: ['<div></div>','<div></div>']
- });
- var content_slider = $(".content-slider").owlCarousel({
+  });
+  var content_slider = $(".content-slider").owlCarousel({
    items: 1,
    nav: true,
    dots: false,
    loop: true,
    navText: ['<div></div>','<div></div>'],
- });
- var tabs_slider = $("#tabs-slider").owlCarousel({
+  });
+  var tabs_slider = $("#tabs-slider").owlCarousel({
    items: 1,
    nav: false,
    dots: false,
- });
+  });
+  if($(window).width() < 768){
+    var mobile_team_slider = $("#team .people").addClass("owl-carousel").owlCarousel({
+      items: 1,
+      nav: true,
+      dots: false,
+      loop: true,
+      navText: ['<div></div>','<div></div>']
+    });
+  }
 
  var calc1 = new Calculator();
  var calc2 = new Calculator({
@@ -272,7 +281,7 @@ function AnimOnScroll(options){
 
 function FloatingMenu(options){
   var defs = {
-    points: [0,700],
+    points: [0,100],
     classes: ["","dark"],
     menu: ".menu"
   };
@@ -405,7 +414,7 @@ function Logo(){
     // console.log(sections);
     // console.log(offsets);
     // offsets.shift();
-    offsets.push(offsets[offsets.length-1]+2000);
+    // offsets.push(offsets[offsets.length-1]+2000);
     if(offsets.length !== classes.length){
       console.log("Sections("+offsets.length+") and classes("+classes.length+") count don't match!");
     }

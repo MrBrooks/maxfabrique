@@ -3,6 +3,14 @@
   margin-bottom: 0;
   &:extend(.full-bg);
   background-image: url(../img/images/banner.jpg);
+  @media screen and (max-width: @mobile){
+    background-image: none;
+    padding-top: 0;
+    margin-bottom: 180px;
+  }
+  .col-md-11{
+    padding: 0;
+  }
   .block-content{
     padding: 120px 0 265px;
     color: white;
@@ -11,14 +19,34 @@
       content: "";
       clear: both;
     }
+    @media screen and (max-width: @mobile){
+      padding: 0;
+    }
   }
   .block-content>div{
     width: 50%;
     float: left;
     padding-right: 30px;
+    @media screen and (max-width: @mobile){
+      width: 100%;
+      padding: 30px 15px;
+    }
+  }
+  .slogan{
+    &:extend(.full-bg);
+    @media screen and (max-width: @mobile){
+      background-image: url(../img/images/banner.jpg);
+      padding: 30px 15px;
+      // margin-left: -10px;
+      // margin-right: -10px;
+    }
   }
   .calc-block{
     padding-left: 30px;
+    @media screen and (max-width: @mobile){
+      padding: 0;
+      color: @gray;
+    }
   }
   .block-logo{
     padding: 0;
@@ -27,6 +55,9 @@
     text-align: center;
     width: 100%;
     padding: 0;
+    @media screen and (max-width: @mobile){
+      display: none;
+    }
     div{
       margin: auto;
     }
@@ -80,7 +111,7 @@
   }
 }
 .block-logo{
-  padding-top: 35px;
+  // padding-top: 35px;
 }
 #about{
   .block-content{
@@ -90,6 +121,9 @@
     padding: 0 80px;
     max-width: 640px;
     padding-bottom: 60px;
+    @media screen and (max-width: @mobile){
+      padding: 30px 15px;
+    }
   }
   .title{
     color: white;
@@ -99,6 +133,12 @@
     margin-top: -60px;
     position: relative;
     top: -20px;
+    &.down-up{
+      top: 20px;
+      &.visible{
+        top: -20px;
+      }
+    }
   }
   
   .descr{
@@ -113,10 +153,15 @@
     margin-bottom: 30px;
     padding-left: 80px;
   }
-
+  .row>div{
+    padding: 0;
+  }
 }
 .project{
   margin-bottom: 60px;
+  @media screen and (max-width: @mobile){
+    margin-bottom: 25px;
+  }
   &:after{
     content: '';
     clear: both;
@@ -128,6 +173,12 @@
   }
   .slider{
     width: 60%;
+    @media screen and (max-width: @mobile){
+      width: 100%;
+    }
+    .img{
+      height: 100%;
+    }
   }
   .info{
     width: ~"calc(40% + 60px)";
@@ -135,20 +186,60 @@
     margin-left: -60px;
     z-index: 1;
     position: relative;
+    @media screen and (max-width: @mobile){
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
   }
   .subtitle{
     text-transform: uppercase;
     font-weight: 700;
     color: @yellow;
   }
+  .mobile-title{
+    display: none;
+    text-transform: uppercase;  
+    @media screen and (max-width: @mobile){
+      display: block;
+      padding: 27px 0;
+      text-align: center;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+  }
+  .mobile-popup-open{
+    display: none;
+    &:after{
+      content: "";
+      display: block;
+      width: 10px;
+      height: 10px;
+      border-right: 2px solid white;
+      border-bottom: 2px solid white;
+      transform: rotate(-45deg);
+      transform-origin: 50% 50%;
+      position: absolute;
+      right: 90px;
+      top: 26px;
+    }
+    @media screen and (max-width: @mobile){
+      display: block;
+      width: 100%;
+      position: relative;
+    }
+  }
   .scroll-block{
     background-color: #fff;
     padding: 40px;
     max-height: 300px;
     overflow: auto;
+    @media screen and (max-width: @mobile){
+      display: none;
+    }
     &::-webkit-scrollbar {
-    width: 12px;
-    // background-color: @red;
+      width: 12px;
+      // background-color: @red;
     }
     &::-webkit-scrollbar-thumb{
         max-height: 33%;
@@ -168,6 +259,9 @@
     .descr, .price{
       padding: 20px 40px;
       background-color: @yellow-dark;
+      @media screen and (max-width: @mobile){
+        padding: 20px;
+      }
     }
     .descr{
       background-color: @yellow;
@@ -266,6 +360,10 @@
       float: left;
       text-align: right;
       padding-right: 50px;
+      @media screen and (max-width: @mobile){
+        width: 100%;
+        text-align: left;
+      }
     }
     .descr{
       display: inline-block;
@@ -273,10 +371,17 @@
       float: left;
       font-weight: 300;
       padding-right: 50px;
+      @media screen and (max-width: @mobile){
+        width: 100%;
+        padding-right: 0;
+      }
     }
   }
   .btn{
     margin-left: 40%;
+    @media screen and (max-width: @mobile){
+      margin: 0;
+    }
   }
 }
 .content-slider{
@@ -295,13 +400,34 @@
   .btn{
     margin: auto;
     display: block;
+    @media screen and (max-width: @mobile){
+      // margin-left: 15px;
+      // margin: 0;
+      width: 200px;
+    }
+  }
+  .btn-container{
+    @media screen and (max-width: @mobile){
+      padding: 0 15px;
+    }
   }
   .title.first{
     margin-bottom: 50px;
+    @media screen and (max-width: @mobile){
+      padding: 0 15px;
+    }
   }
   .title.second{
     margin-top: 20px;
     margin-bottom: 30px;
+    @media screen and (max-width: @mobile){
+      padding: 0 15px;
+    }
+  }
+  .col-md-11{
+    @media screen and (max-width: @mobile){
+      padding: 0;
+    }
   }
 }
 .people{
@@ -317,6 +443,10 @@
     background-color: white;
     margin-bottom: 30px;
     min-height: 620px;
+    @media screen and (max-width: @mobile){
+      width: 100%;
+      margin-bottom: 0;
+    }
     &>div{
       margin-bottom: 20px;
       padding: 0 15px;
@@ -335,13 +465,26 @@
   }
 }
 #repairs{
+  @media screen and (max-width: @mobile){
+    margin: 0;
+  }
   .rem{
     background-color: @cyan;
     padding: 120px 18% 140px;
     color: white;
+    @media screen and (max-width: @mobile){
+      // margin-left: -10px;
+      // margin-right: -10px;
+      padding: 50px 15px;
+    }
   }
   .gotoplace{
     padding: 90px 9% 90px;
+    @media screen and (max-width: @mobile){
+      // margin-left: -10px;
+      // margin-right: -10px;
+      padding: 50px 15px;
+    }
   }
 }
 #subscribe{
@@ -351,10 +494,18 @@
     padding: 60px 8%;
     display: inline-block;
     font-size: 20px;
-
+    @media screen and (max-width: @mobile){
+      width: 100%;
+      text-align: center;
+      // margin-left: -10px;
+      // margin-right: -10px;
+    }
   }
   .subscribe-form{
     padding: 60px 8% 10px;
+    @media screen and (max-width: @mobile){
+      padding: 30px 15px 0;
+    }
   }
   .form-title{
     text-transform: uppercase;
@@ -365,6 +516,9 @@
   .form-descr{
     margin-bottom: 40px;
     max-width: 520px;
+    @media screen and (max-width: @mobile){
+
+    }
   }
   .label{
     text-transform: uppercase;
@@ -375,9 +529,16 @@
     border: 3px solid @yellow;
     padding: 17px 20px;
     width: 300px;
+    @media screen and (max-width: @mobile){
+      width: 100%;
+      margin-bottom: 20px;
+    }
   }
 }
 #art-concepts{
+  @media screen and (max-width: @mobile){
+    margin: 0;
+  }
   .block-content{
     background-color: @gray-dark;
   }
@@ -390,6 +551,10 @@
   .title{
     font-size: 16px;
     padding: 40px 40px 25px;
+    @media screen and (max-width: @mobile){
+      padding-left: 15px;
+      padding-right: 15px;
+    }
   }
   .subtitle{
     text-transform: uppercase;
@@ -398,12 +563,24 @@
     float: left;
     width: 50%;
     padding: 0 40px;
+    @media screen and (max-width: @mobile){
+      width: 100%;
+      padding-right: 15px;
+      padding-left: 15px;
+      margin-bottom: 20px;
+    }
   }
   .descr{
     float: left;
     width: 50%;
     padding: 0 40px 80px;
     color: white;
+    @media screen and (max-width: @mobile){
+      width: 100%;
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-bottom: 30px;
+    }
   }
   .slider{
     padding: 0;
@@ -414,6 +591,9 @@
   
 }
 #instagram{
+  @media screen and (max-width: @mobile){
+    margin: 0;
+  }
   .title{
     float: right;
     max-width: 400px;
@@ -421,13 +601,26 @@
     font-size: 20px;
     color: white;
     background-color: @magenta;
+    @media screen and (max-width: @mobile){
+      padding-left: 15px;
+      padding-right: 15px;
+      float: none;
+    }
   }
   .content{
     padding-top: 100px;
     max-width: 70%;
+    @media screen and (max-width: @mobile){
+      padding-top: 0;
+      width: 100%;
+      max-width: none;
+    }
     &>div{
       background-color: white;
       padding: 80px 12%;
+      @media screen and (max-width: @mobile){
+        padding: 50px 15px;
+      }
     }
   }
   .subtitle{
@@ -441,10 +634,17 @@
   }
 }
 #contacts{
+  @media screen and (max-width: @mobile){
+    margin-bottom: 5px;
+  }
   .block-content{
     background-color: white;
     margin-top: 45px;
     padding: 0 8% 60px;
+    @media screen and (max-width: @mobile){
+      padding-left: 15px;
+      padding-right: 15px;
+    }
   }
   .title{
     background-color: @magenta;
@@ -454,12 +654,20 @@
     margin-top: -45px;
     // margin-left: 8%;
     margin-bottom: 30px;
+    @media screen and (max-width: @mobile){
+      padding: 20px 40px;
+      width: 100%;
+    }
   }
   .calc{
     margin-bottom: 50px;
     &>div{
       float: left;
       width: 50%;
+      @media screen and (max-width: @mobile){
+        float: none;
+        width: 100%;
+      }
     }
     .quote{
       padding-right: 30px;
@@ -476,6 +684,10 @@
       width: 50%;
       float: right;
       margin: 0;
+      @media screen and (max-width: @mobile){
+        float: none;
+        width: 100%;
+      }
     }
     .btn{
       margin-top: 20px;
@@ -495,17 +707,28 @@
     .form{
       float: left;
       width: 50%;
+      @media screen and (max-width: @mobile){
+        float: none;
+        width: 100%;
+      }
       input{
         background-color: white;
         border: 3px solid @yellow;
         padding: 17px 20px;
         width: 300px;
         margin-bottom: 20px;
+        @media screen and (max-width: @mobile){
+          width: 100%;
+        }
       }
     }
     .contact{
       float: right;
       width: 50%;
+      @media screen and (max-width: @mobile){
+        float: none;
+        width: 100%;
+      }
       &>div{
         margin-bottom: 20px;
         font-size: 20px;
@@ -527,11 +750,61 @@
     }
   }
 }
+#article{
+  @media screen and (max-width: @mobile){
+    margin-bottom: 10px;
+  }
+  .block-content{
+    background-color: #fff;
+    max-height: 600px;
+    &>div{
+      display: inline-block;
+      vertical-align: top;
+    }
+    @media screen and (max-width: @mobile){
+      max-height: none;
+    }
+  }
+  .pic{
+    // width: 33%;
+    img{
+      max-height: 600px;
+    }
+    @media screen and (max-width: @mobile){
+      width: 100%;
+    }
+  }
+  .content{
+    // width: 60%;
+    padding: 70px 80px 0;
+    max-width: 50%;
+    @media screen and (max-width: @mobile){
+      max-width: none;
+      padding: 30px 15px;
+    }
+  }
+  .title{
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  .descr{
+    margin-bottom: 20px;
+  }
+  a{
+    margin-bottom: 20px;
+    display: block;
+  }
+  .vk{
+    padding-top: 5px;
+    padding-left: 7px;
+    margin-right: 10px;
+  }
+}
 
 // ANIMATIONS
 .down-up{
   position: relative;
-  overflow: hidden;
+  // overflow: hidden;
   top: 100px;
   opacity: 0;
   transition: all 1500ms cubic-bezier(0.22, 0.61, 0.36, 1);
@@ -539,6 +812,9 @@
   &.visible{
     top: 0;
     opacity: 1;
+  }
+  @media screen and (max-width: @mobile){
+    // overflow: auto;
   }
 }
 
