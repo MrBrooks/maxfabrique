@@ -1,4 +1,4 @@
-// @import 'https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic';
+@import 'https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic';
 
 // GENERAL TAGS
 ul{
@@ -67,6 +67,11 @@ footer{
     display: block;
     margin-bottom: 10px;
   }
+  br{
+    @media screen and (max-width: @mobile){
+      display: none;
+    }
+  }
   .logo{
     display: block;
     padding: 0;
@@ -94,6 +99,7 @@ footer{
 }
 .mobile-logo{
   display: none;
+  margin-bottom: 20px;
   @media screen and (max-width: @mobile){
     display: block;
   }
@@ -162,6 +168,9 @@ footer{
   outline:none;
   border-bottom: 2px solid white;
   color: white;
+  @media screen and (max-width: @mobile){
+    border-color: @gray;
+  }
 }
 .logo{
   padding-left: 30px;

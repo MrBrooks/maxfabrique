@@ -8,6 +8,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+@import 'https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic';
 html
 {
     font-family: sans-serif;
@@ -4148,6 +4149,13 @@ footer li
 
     margin-bottom: 10px;
 }
+@media screen and (max-width: 767px)
+{
+    footer br
+    {
+        display: none;
+    }
+}
 footer .logo
 {
     display: block;
@@ -4191,6 +4199,8 @@ footer .socials div
 .mobile-logo
 {
     display: none;
+
+    margin-bottom: 20px;
 }
 @media screen and (max-width: 767px)
 {
@@ -4231,7 +4241,8 @@ footer .socials div
 .vk,
 .fb,
 .twi,
-.youtube
+.youtube,
+#mobile-popups .popup
 {
     -webkit-transition: all 300ms cubic-bezier(.55, .06, .68, .19);
             transition: all 300ms cubic-bezier(.55, .06, .68, .19);
@@ -4295,6 +4306,13 @@ footer .socials div
     outline: none;
     background-color: transparent;
     box-shadow: 0;
+}
+@media screen and (max-width: 767px)
+{
+    .input-text
+    {
+        border-color: #63666a;
+    }
 }
 .logo
 {
@@ -4828,6 +4846,20 @@ footer .socials div
 {
     text-decoration: underline;
 }
+@media screen and (max-width: 767px)
+{
+    .title
+    {
+        font-size: 24px;
+    }
+}
+@media screen and (max-width: 767px)
+{
+    .calc
+    {
+        text-align: center;
+    }
+}
 .calc #calc-result
 {
     font-size: 28px;
@@ -4845,6 +4877,7 @@ footer .socials div
     position: relative;
 
     max-width: 640px;
+    margin: 0;
     margin-top: -140px;
     padding: 0 80px;
     padding-bottom: 60px;
@@ -4856,6 +4889,8 @@ footer .socials div
     #about .block-content
     {
         padding: 30px 15px;
+
+        text-align: center;
     }
 }
 #about .title
@@ -4879,9 +4914,22 @@ footer .socials div
 {
     top: -20px;
 }
+@media screen and (max-width: 767px)
+{
+    #about .title
+    {
+        display: inline-block;
+
+        margin: auto;
+        margin-top: -80px;
+        padding: 20px 40px;
+    }
+}
 #about .descr
 {
     font-weight: 300;
+
+    text-align: left;
 }
 #about .descr span
 {
@@ -5140,6 +5188,11 @@ footer .socials div
     right: 0;
     left: initial;
 }
+#clients .block-content
+{
+    padding-right: 15px;
+    padding-left: 15px;
+}
 #clients .title
 {
     margin-bottom: 20px;
@@ -5229,6 +5282,14 @@ footer .socials div
 .content-slider .owl-nav > div:hover
 {
     background-color: #c40144;
+}
+@media screen and (max-width: 767px)
+{
+    .content-slider
+    {
+        width: calc(100% + 30px);
+        margin-left: -15px;
+    }
 }
 #team .btn
 {
@@ -5333,6 +5394,13 @@ footer .socials div
 .people img
 {
     width: 100%;
+}
+.people.owl-carousel .owl-nav
+{
+    top: calc(100vw - 50px);
+    right: 0;
+    bottom: initial;
+    left: initial;
 }
 @media screen and (max-width: 767px)
 {
@@ -5899,4 +5967,41 @@ footer .socials div
 .cyclic-anim li.prev
 {
     top: -40px;
+}
+#mobile-popups .popup
+{
+    position: fixed;
+    z-index: 2000;
+    top: 100vh;
+    left: 0;
+
+    overflow: auto;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: 0;
+    background-color: #fff;
+}
+#mobile-popups .popup.active
+{
+    top: 0;
+
+    opacity: 1;
+}
+#mobile-popups .popup.active .popup-close-btn
+{
+    bottom: 0;
+}
+#mobile-popups .content
+{
+    padding: 30px 15px 60px;
+}
+#mobile-popups .popup-close-btn
+{
+    position: fixed;
+    bottom: -100px;
+    left: 0;
+
+    width: 100%;
 }

@@ -11,6 +11,7 @@ $(document).ready(function() {
 
  /*    //= ./common/material-init.js */
  /*    //= ./common/google-analytics.js */
+
   $.jMaskGlobals = {
     maskElements: 'input,td,span,div',
     dataMaskAttr: '*[data-mask]',
@@ -76,6 +77,8 @@ $(document).ready(function() {
   autoplay.start();
  // $('.money').mask("### ###", {reverse: true, optional: true});
  // $.applyDataMask();
+ mobilePictures();
+ mobilePopup();
 
   $("input[name='phone']").mask('+7 (000) 000-00-00');
 
@@ -461,7 +464,40 @@ function Logo(){
     _.delay(logoIn, delay);
   }
   init();
+}
 
-  
+function mobilePictures(){
+  var imgs = $("[data-msrc]");
+  var originals = [];
+
+  function init(){
+    imgs.each(function(){
+      originals.push($(this).attr("src"));
+      $(this).attr("src",$(this).attr("data-msrc"));
+    });
+
+  }
+  if($(window).width() < 768){
+    init();
+  }
+}
+function mobilePopup(){
+  var popups = $("#mobile-popups .popup"),
+      btns_open = $(".mobile-popup-open"),
+      btns_close = $(".popup-close-btn");
+
+  function init(){
+    btns_open.on("click",function(){
+      var index = parseInt($(this).attr("data-index")) - 1;
+      $(popups.get(index)).addClass("active");
+    });
+    btns_close.on("click",function(){
+      var index = parseInt($(this).attr("data-index")) - 1;
+      $(popups.get(index)).removeClass("active");
+    });
+
+  }
+
+  init();
 }
 
