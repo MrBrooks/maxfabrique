@@ -28,9 +28,14 @@ body{
 h1,h2,h3,h4,h5,h6{
   text-transform: uppercase;
   margin: 0;
+  @media screen and (max-width: @mobile){
+    letter-spacing: 2px;
+    line-height: 1.1;
+  }
 }
 section{
   margin-bottom: 40px;
+  position: relative;
 }
 img{
   max-width: 100%;
@@ -457,5 +462,49 @@ footer{
 .col-md-11{
   @media screen and (max-width: @mobile){
     padding: 0;
+  }
+}
+.background{
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  @media screen and (max-width: @mobile){
+    display: none;
+  }
+  div{
+    position: absolute;
+  }
+  .png-sprite--appolon{
+    top: -200px;
+    right: 0;
+    opacity: 0.3;
+  }
+  .png-sprite--capitel{
+    bottom: 0;
+    right: 0;
+    opacity: 0.3;
+  }
+  .svg-sprite--bg1{
+    left: -100px;
+    top: 350px;
+  }
+  .svg-sprite--bg3{
+    left: -50px;
+    top: 600px;
+  }
+  .svg-sprite--bg2{
+    right: -180px;
+    top: -100px;
+  }
+  .svg-sprite--bg4{
+    bottom: 0;
+    right: -100px;
+  }
+  .svg-sprite--bg5{
+    bottom: 0;
+    right: 0;
   }
 }
