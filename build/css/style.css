@@ -6141,7 +6141,11 @@ footer .socials div
 }
 #mobile-popups .content
 {
-    padding: 30px 15px 60px;
+    padding: 30px 15px 90px;
+}
+#mobile-popups .title
+{
+    padding-left: 0;
 }
 #mobile-popups .popup-close-btn
 {
@@ -6150,4 +6154,5 @@ footer .socials div
     left: 0;
 
     width: 100%;
+    margin: 0;
 }

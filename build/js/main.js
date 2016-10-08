@@ -12620,10 +12620,12 @@ function mobilePopup(){
     btns_open.on("click",function(){
       var index = parseInt($(this).attr("data-index")) - 1;
       $(popups.get(index)).addClass("active");
+      $("body").css("overflow","hidden");
     });
     btns_close.on("click",function(){
       var index = parseInt($(this).attr("data-index")) - 1;
       $(popups.get(index)).removeClass("active");
+      $("body").css("overflow","auto");
     });
 
   }
