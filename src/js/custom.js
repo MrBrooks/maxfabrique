@@ -202,7 +202,7 @@ function AnimOnScroll(options){
   var def = {
     selector: ".scroll-anim",
     visible: "visible",
-    delay: 300
+    delay: 100
   };
 
   var self = this;
@@ -497,7 +497,6 @@ function mobilePopup(){
       $(popups.get(index)).removeClass("active");
       $("body").css("overflow","auto");
     });
-
   }
 
   init();
