@@ -6059,8 +6059,8 @@ footer .socials div
     position: relative;
     top: 100px;
 
-    -webkit-transition: all 1500ms cubic-bezier(.22, .61, .36, 1);
-            transition: all 1500ms cubic-bezier(.22, .61, .36, 1);
+    -webkit-transition: all 1000ms cubic-bezier(.22, .61, .36, 1);
+            transition: all 1000ms cubic-bezier(.22, .61, .36, 1);
     -webkit-transition-delay: 100ms;
             transition-delay: 100ms;
 
