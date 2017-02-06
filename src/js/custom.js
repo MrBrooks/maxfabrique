@@ -2,7 +2,9 @@
 /* Custom JavaScript files supervisor */
 /**************************************/
 $(window).load(function(){
+  $("#preloader").css("top",-100-$(window).height()+"px");
   $(window).trigger('resize');
+  $(window).trigger('scroll');
 });
 
 $(document).ready(function() {
@@ -11,6 +13,10 @@ $(document).ready(function() {
 
  /*    //= ./common/material-init.js */
  /*    //= ./common/google-analytics.js */
+
+  setTimeout(function(){
+    $("#preloader").css("top",-100-$(window).height()+"px");
+  },10000);
 
   $.jMaskGlobals = {
     maskElements: 'input,td,span,div',
@@ -75,6 +81,8 @@ $(document).ready(function() {
     pause: 3000
   });
   autoplay.start();
+
+  // var window_max_width = new WindowMaxWidth();
  // $('.money').mask("### ###", {reverse: true, optional: true});
  // $.applyDataMask();
  mobilePictures();
@@ -99,6 +107,23 @@ $(document).ready(function() {
 
   var menu = new FloatingMenu();
   var logo = new Logo();
+  var ajax_submit_callback = new AjaxSubmit({
+    form: "#callback-form",
+    message: ".btn",
+  });
+  var ajax_submit_subscribe = new AjaxSubmit({
+    form: "#subscribe-form",
+    message: ".btn",
+    inputs: '[name="email"]',
+    validate: function(el){
+      var isemail = /.+@.+\..+/i;
+      var t = el.val();
+      if(t === '' || !isemail.test(t)){
+        return false;
+      }
+      return true;
+    }
+  });
 
   var window_updater = new WindowUpdater([
     {
@@ -117,6 +142,7 @@ $(document).ready(function() {
       actions: [
         scroll_anim.updateItems,
         logo.resize,
+        // window_max_width.update,
         // full_height.update
       ]
     }
@@ -499,6 +525,19 @@ function mobilePopup(){
     });
   }
 
+  init();
+}
+function WindowMaxWidth(){
+  var width;
+
+  function init(){
+    width = $(window).width();
+    $("body,html").css("width", width+"px");
+  }
+
+  this.update = function(){
+    init();
+  };
   init();
 }
 

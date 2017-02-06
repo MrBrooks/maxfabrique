@@ -104,6 +104,11 @@
     line-height: 1.1;
   }
 }
+input.square{
+  @media screen and (max-width: @mobile){
+    color: @yellow;
+  }
+}
 .calc{
   @media screen and (max-width: @mobile){
     text-align: center;
@@ -568,6 +573,9 @@
       width: 100%;
       margin-bottom: 20px;
     }
+    &.invalid{
+      border-color: @magenta;
+    }
   }
 }
 #art-concepts{
@@ -758,6 +766,9 @@
         @media screen and (max-width: @mobile){
           width: 100%;
         }
+        &.invalid{
+          border-color: @magenta;
+        }
       }
     }
     .contact{
@@ -814,7 +825,7 @@
   }
   .content{
     // width: 60%;
-    padding: 70px 80px 0;
+    padding: 70px 50px 0;
     max-width: 50%;
     @media screen and (max-width: @mobile){
       max-width: none;
