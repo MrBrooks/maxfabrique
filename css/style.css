@@ -8,7 +8,6 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
-@import 'https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=cyrillic';
 html
 {
     font-family: sans-serif;
@@ -3589,10 +3588,9 @@ select[multiple].input-lg
 .owl-carousel .owl-grab
 {
     cursor: move;
-    cursor: -webkit-grab;
-    cursor:      -o-grab;
-    cursor:     -ms-grab;
-    cursor:         grab;
+    cursor:  -o-grab;
+    cursor: -ms-grab;
+    cursor:     grab;
 }
 .owl-carousel.owl-rtl
 {
@@ -3724,8 +3722,8 @@ This must be run when you have at least 2 sprites.
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -1px -1px;
-    background-size: 793px 691px;
+    background-position: -2px -2px;
+    background-size: 797px 694px;
 }
 .no-svg .svg-sprite--bg4
 {
@@ -3738,8 +3736,8 @@ This must be run when you have at least 2 sprites.
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -387px -1px;
-    background-size: 793px 691px;
+    background-position: -389px -2px;
+    background-size: 797px 694px;
 }
 .no-svg .svg-sprite--bg1
 {
@@ -3752,8 +3750,8 @@ This must be run when you have at least 2 sprites.
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -1px -387px;
-    background-size: 793px 691px;
+    background-position: -2px -389px;
+    background-size: 797px 694px;
 }
 .no-svg .svg-sprite--bg2
 {
@@ -3766,8 +3764,8 @@ This must be run when you have at least 2 sprites.
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -305px -387px;
-    background-size: 793px 691px;
+    background-position: -307px -389px;
+    background-size: 797px 694px;
 }
 .no-svg .svg-sprite--bg3
 {
@@ -3780,8 +3778,8 @@ This must be run when you have at least 2 sprites.
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -505px -387px;
-    background-size: 793px 691px;
+    background-position: -508px -389px;
+    background-size: 797px 694px;
 }
 .no-svg .svg-sprite--bg5
 {
@@ -3794,8 +3792,8 @@ This must be run when you have at least 2 sprites.
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -651px -387px;
-    background-size: 793px 691px;
+    background-position: -655px -389px;
+    background-size: 797px 694px;
 }
 .no-svg .svg-sprite--logo-white
 {
@@ -3808,8 +3806,8 @@ This must be run when you have at least 2 sprites.
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -725px -1px;
-    background-size: 793px 691px;
+    background-position: -728px -2px;
+    background-size: 797px 694px;
 }
 .no-svg .svg-sprite--logos-footer
 {
@@ -3822,8 +3820,8 @@ This must be run when you have at least 2 sprites.
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -725px -121px;
-    background-size: 793px 691px;
+    background-position: -728px -123px;
+    background-size: 797px 694px;
 }
 .no-svg .svg-sprite--logo
 {
@@ -3836,8 +3834,8 @@ This must be run when you have at least 2 sprites.
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -725px -241px;
-    background-size: 793px 691px;
+    background-position: -728px -244px;
+    background-size: 797px 694px;
 }
 .no-svg .svg-sprite--symbols-07
 {
@@ -3850,8 +3848,8 @@ This must be run when you have at least 2 sprites.
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -725px -294px;
-    background-size: 793px 691px;
+    background-position: -728px -298px;
+    background-size: 797px 694px;
 }
 .no-svg .svg-sprite--symbols-08
 {
@@ -3864,8 +3862,8 @@ This must be run when you have at least 2 sprites.
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -757px -241px;
-    background-size: 793px 691px;
+    background-position: -761px -244px;
+    background-size: 797px 694px;
 }
 .no-svg .svg-sprite--symbols-06
 {
@@ -3878,8 +3876,8 @@ This must be run when you have at least 2 sprites.
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -725px -345px;
-    background-size: 793px 691px;
+    background-position: -728px -350px;
+    background-size: 797px 694px;
 }
 .no-svg .svg-sprite--symbols-05
 {
@@ -3892,8 +3890,8 @@ This must be run when you have at least 2 sprites.
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -725px -385px;
-    background-size: 793px 691px;
+    background-position: -728px -391px;
+    background-size: 797px 694px;
 }
 .no-svg .svg-sprite--symbols-04
 {
@@ -3906,8 +3904,8 @@ This must be run when you have at least 2 sprites.
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -725px -428px;
-    background-size: 793px 691px;
+    background-position: -728px -435px;
+    background-size: 797px 694px;
 }
 .no-svg .svg-sprite--symbols-10
 {
@@ -3920,8 +3918,8 @@ This must be run when you have at least 2 sprites.
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -725px -469px;
-    background-size: 793px 691px;
+    background-position: -728px -477px;
+    background-size: 797px 694px;
 }
 .no-svg .svg-sprite--symbols-01
 {
@@ -3934,8 +3932,8 @@ This must be run when you have at least 2 sprites.
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -725px -510px;
-    background-size: 793px 691px;
+    background-position: -728px -519px;
+    background-size: 797px 694px;
 }
 .no-svg .svg-sprite--symbols-09
 {
@@ -3948,8 +3946,8 @@ This must be run when you have at least 2 sprites.
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -772px -294px;
-    background-size: 793px 691px;
+    background-position: -776px -298px;
+    background-size: 797px 694px;
 }
 .no-svg .svg-sprite--arrow
 {
@@ -3962,8 +3960,8 @@ This must be run when you have at least 2 sprites.
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -766px -428px;
-    background-size: 793px 691px;
+    background-position: -768px -519px;
+    background-size: 797px 694px;
 }
 .no-svg .svg-sprite--symbols-03
 {
@@ -3976,8 +3974,8 @@ This must be run when you have at least 2 sprites.
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -765px -469px;
-    background-size: 793px 691px;
+    background-position: -769px -477px;
+    background-size: 797px 694px;
 }
 .no-svg .svg-sprite--symbols-02
 {
@@ -3991,8 +3989,8 @@ This must be run when you have at least 2 sprites.
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -770px -345px;
-    background-size: 793px 691px;
+    background-position: -774px -350px;
+    background-size: 797px 694px;
 }
 .no-svg .svg-sprite--youtube
 {
@@ -4006,8 +4004,8 @@ This must be run when you have at least 2 sprites.
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -770px -365px;
-    background-size: 793px 691px;
+    background-position: -774px -371px;
+    background-size: 797px 694px;
 }
 .no-svg .svg-sprite--twi
 {
@@ -4021,8 +4019,8 @@ This must be run when you have at least 2 sprites.
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -772px -331px;
-    background-size: 793px 691px;
+    background-position: -776px -336px;
+    background-size: 797px 694px;
 }
 .no-svg .svg-sprite--vk
 {
@@ -4036,8 +4034,8 @@ This must be run when you have at least 2 sprites.
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -767px -385px;
-    background-size: 793px 691px;
+    background-position: -771px -391px;
+    background-size: 797px 694px;
 }
 .no-svg .svg-sprite--fb
 {
@@ -4051,8 +4049,8 @@ This must be run when you have at least 2 sprites.
 
     background-image: url('../img/sprites/svg/svg-sprite.svg');
     background-repeat: no-repeat;
-    background-position: -767px -403px;
-    background-size: 793px 691px;
+    background-position: -771px -410px;
+    background-size: 797px 694px;
 }
 .no-svg .svg-sprite--inst
 {
@@ -4418,22 +4416,18 @@ footer .socials div
     -webkit-transition: -webkit-transform 300ms;
             transition:         transform 300ms;
     -webkit-transform: scale(1);
-        -ms-transform: scale(1);
             transform: scale(1);
     -webkit-transform-origin: 50% 50%;
-        -ms-transform-origin: 50% 50%;
             transform-origin: 50% 50%;
 }
 .logo #logo-element.out
 {
     -webkit-transform: scale(0);
-        -ms-transform: scale(0);
             transform: scale(0);
 }
 .logo #logo-element.in
 {
     -webkit-transform: scale(1);
-        -ms-transform: scale(1);
             transform: scale(1);
 }
 @media screen and (max-width: 767px)
@@ -4524,9 +4518,8 @@ footer .socials div
     z-index: 1000;
 
     display: -webkit-inline-box;
-    display: -webkit-inline-flex;
     display: -ms-inline-flexbox;
-    display:         inline-flex;
+    display: inline-flex;
 
     width: calc(100% / 12 * 11 - 40px);
     padding-right: 80px;
@@ -4536,9 +4529,8 @@ footer .socials div
     color: white;
 
     -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
-            justify-content: space-between;
+    justify-content: space-between;
 }
 @media screen and (max-width: 767px)
 {
@@ -4652,10 +4644,8 @@ footer .socials div
     height: 15px;
 
     -webkit-transform: rotate(45deg);
-        -ms-transform: rotate(45deg);
             transform: rotate(45deg);
     -webkit-transform-origin: 50% 50%;
-        -ms-transform-origin: 50% 50%;
             transform-origin: 50% 50%;
 
     border-bottom: 2px solid white;
@@ -4668,7 +4658,6 @@ footer .socials div
 .owl-nav .owl-next > div
 {
     -webkit-transform: rotate(-135deg);
-        -ms-transform: rotate(-135deg);
             transform: rotate(-135deg);
 }
 .inst
@@ -4868,7 +4857,9 @@ footer .socials div
 }
 #start .block-content
 {
-    padding: 120px 0 265px;
+    position: relative;
+
+    padding: 160px 0;
 
     color: white;
 }
@@ -4888,9 +4879,6 @@ footer .socials div
 }
 #start .block-content > div
 {
-    float: left;
-
-    width: 50%;
     padding-right: 30px;
 }
 @media screen and (max-width: 767px)
@@ -4929,7 +4917,13 @@ footer .socials div
 }
 #start div.go-down
 {
+    position: absolute;
+    right: 0;
+    bottom: 40px;
+    left: 0;
+
     width: 100%;
+    margin: auto;
     padding: 0;
 
     text-align: center;
@@ -4947,13 +4941,19 @@ footer .socials div
 }
 #start h1
 {
+    font-size: 34px;
+
     margin-bottom: 30px;
+
+    text-align: center;
 }
 #start .price
 {
     font-size: 18px;
 
     margin-bottom: 20px;
+
+    text-align: center;
 }
 #start .price span
 {
@@ -4968,7 +4968,6 @@ footer .socials div
 {
     display: block;
 
-    max-width: 350px;
     margin: 6px 0;
 }
 #start li:before
@@ -5029,6 +5028,104 @@ footer .socials div
 {
     max-width: 300px;
     margin-bottom: 20px;
+}
+#result
+{
+    padding: 50px 0 60px;
+}
+#result .calc-block
+{
+    padding-top: 90px;
+}
+#projects-slider
+{
+    position: relative;
+
+    padding-top: 50px;
+}
+#projects-slider > .owl-controls .owl-nav
+{
+    position: initial;
+}
+#projects-slider > .owl-controls .owl-nav > div
+{
+    position: absolute;
+
+    width: auto;
+    padding-top: 14px;
+
+    color: #fff;
+    background-color: #e0004d;
+}
+#projects-slider > .owl-controls .owl-dots
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    width: 50%;
+    margin: auto;
+
+    text-align: center;
+}
+#projects-slider > .owl-controls .owl-dot
+{
+    display: inline-block;
+
+    width: 10px;
+    height: 10px;
+    margin: 10px;
+
+    -webkit-transition: all 500ms;
+            transition: all 500ms;
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    vertical-align: middle;
+
+    border-radius: 50%;
+    background-color: #c9c9c9;
+}
+#projects-slider > .owl-controls .owl-dot.active
+{
+    -webkit-transform: scale(1.8);
+            transform: scale(1.8);
+
+    background-color: #e0004d;
+}
+#projects-slider > .owl-controls .owl-prev
+{
+    top: 0;
+    left: 0;
+}
+#projects-slider > .owl-controls .owl-prev div
+{
+    display: inline-block;
+
+    vertical-align: middle;
+}
+#projects-slider > .owl-controls .owl-prev span
+{
+    display: inline-block;
+
+    vertical-align: middle;
+}
+#projects-slider > .owl-controls .owl-next
+{
+    top: 0;
+    right: 0;
+}
+#projects-slider > .owl-controls .owl-next div
+{
+    display: inline-block;
+
+    vertical-align: middle;
+}
+#projects-slider > .owl-controls .owl-next span
+{
+    display: inline-block;
+
+    vertical-align: middle;
 }
 #about .block-content
 {
@@ -5104,6 +5201,8 @@ footer .socials div
 }
 .project
 {
+    position: relative;
+
     margin-bottom: 60px;
 }
 @media screen and (max-width: 767px)
@@ -5143,11 +5242,9 @@ footer .socials div
 .project .info
 {
     position: relative;
-    z-index: 1;
 
-    width: calc(40% + 60px);
-    margin-left: -60px;
-    padding: 30px 0 20px;
+    width: 40%;
+    padding: 0;
 }
 @media screen and (max-width: 767px)
 {
@@ -5203,10 +5300,8 @@ footer .socials div
 
     content: '';
     -webkit-transform: rotate(-45deg);
-        -ms-transform: rotate(-45deg);
             transform: rotate(-45deg);
     -webkit-transform-origin: 50% 50%;
-        -ms-transform-origin: 50% 50%;
             transform-origin: 50% 50%;
 
     border-right: 2px solid white;
@@ -5227,7 +5322,6 @@ footer .socials div
 {
     overflow: auto;
 
-    max-height: 300px;
     padding: 40px;
 
     background-color: #fff;
@@ -5281,8 +5375,15 @@ footer .socials div
 .project .summary .descr
 {
     font-weight: 400;
+    line-height: 1;
+
+    height: 60px;
 
     background-color: #e6a32a;
+}
+.project .summary .price
+{
+    height: 160px;
 }
 .project--magenta .scroll-block::-webkit-scrollbar-thumb
 {
@@ -5501,21 +5602,18 @@ footer .socials div
 }
 .people
 {
-    display: -webkit-inline-flex;
-    display:    -moz-inline-flex;
-    display:     -ms-inline-flex;
-    display:      -o-inline-flex;
+    display: -moz-inline-flex;
+    display:  -ms-inline-flex;
+    display:   -o-inline-flex;
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
-    display:         inline-flex;
+    display:      inline-flex;
 
     -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
+    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 .people .item
 {
@@ -6096,6 +6194,9 @@ footer .socials div
 
     opacity: 1;
 }
+@media screen and (max-width: 767px)
+{
+}
 .cyclic-anim
 {
     position: relative;
@@ -6117,10 +6218,12 @@ footer .socials div
     top: 60px;
     left: 0;
 
+    width: 100%;
     padding: 0;
 
     -webkit-transition: all 500ms;
             transition: all 500ms;
+    text-align: center;
 
     opacity: 0;
 }
