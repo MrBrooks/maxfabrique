@@ -35,13 +35,37 @@ $(document).ready(function() {
     }
   };
 
+
+
   $(".slider").owlCarousel({
-   items: 1,
-   nav: true,
-   dots: false,
-   loop: true,
-   navText: ['<div></div>','<div></div>']
+    items: 1,
+    nav: true,
+    dots: false,
+    // loop: true,
+    navText: ['<div></div>','<div></div>'],
+    lazyLoad: true,
+  }).on('initialized.owl.carousel',function(){
+    $(window).trigger('resize');
   });
+
+  var same_height = new HeightControl({
+    adds: -220 // height of summary block
+  });
+
+  $("#projects-slider").owlCarousel({
+    items: 1,
+    nav: true,
+    dots: true,
+    loop: false,
+    mouseDrag: false,
+    touchDrag: false,
+    navText: ['<div></div><span>Предыдущий проект</span>','<span>Следующий проект</span><div></div>']
+  }).on('translate.owl.carousel',function(){
+    $(window).trigger('resize');
+  });
+
+
+
   var content_slider = $(".content-slider").owlCarousel({
    items: 1,
    nav: true,
@@ -49,6 +73,7 @@ $(document).ready(function() {
    loop: true,
    navText: ['<div></div>','<div></div>'],
   });
+
   var tabs_slider = $("#tabs-slider").owlCarousel({
    items: 1,
    nav: false,
@@ -131,10 +156,7 @@ $(document).ready(function() {
       actions: [
         scroll_anim.updateView,
         logo.update,
-        // video_control.update,
-        // video_play.scrollControl,
-        // econtenta_pixel.checkScrollConditions,
-        menu.update
+        menu.update,
       ]
     },
     {
@@ -142,8 +164,7 @@ $(document).ready(function() {
       actions: [
         scroll_anim.updateItems,
         logo.resize,
-        // window_max_width.update,
-        // full_height.update
+        same_height.onResize,
       ]
     }
   ]);
@@ -183,7 +204,7 @@ function Calculator(options){
   function init(){
     target.mask("### ###", {reverse: true, optional: true});
     btn.on("click",function(){
-      if(input.val() != ""){
+      if(input.val() !== ""){
         target.text(parseInt(input.val())* opts.multi).unmask().mask("### ###", {reverse: true, optional: true});
       }
     });
@@ -267,7 +288,6 @@ function AnimOnScroll(options){
     items = _.reject(items,function(item){
       return item.item.hasClass(opt.visible);
     });
-    // console.log(items.length);
   }
 
   self.updateItems = function (){
@@ -367,15 +387,6 @@ function FloatingMenu(options){
         }
       }
     }
-    // i = 0; 
-    // while(i < offsets.length && scrollTop <= offsets[i]){
-    //   ++i;
-    // }
-    // if(i < offsets.length){
-    //   $(links.get(i)).addClass("active").siblings().removeClass("active");
-    // } else{
-
-    // }
   };
 
   function updateOptions(opts2){
@@ -539,5 +550,35 @@ function WindowMaxWidth(){
     init();
   };
   init();
+}
+
+function HeightControl(config){
+  var def = {
+    selector: ".height-control",
+    attr: 'data-height-control-target',
+    adds: 0,
+  };
+  var opts = $.extend(def,config);
+
+  var elements;
+
+  function init(){
+    elements = $(opts.selector);
+  }
+
+
+
+  this.onResize =  function(){
+    elements.each(setHeightToTarget);
+  };
+
+  function setHeightToTarget(){
+    var target = $($(this).attr(opts.attr));
+    var h = $(this).height() + opts.adds;
+    target.outerHeight(h);
+  }
+
+  init();
+  this.onResize();
 }
 

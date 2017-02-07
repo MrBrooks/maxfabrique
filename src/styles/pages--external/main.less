@@ -12,7 +12,8 @@
     padding: 0;
   }
   .block-content{
-    padding: 120px 0 265px;
+    padding: 160px 0;
+    position: relative;
     color: white;
     &:after{
       display: block;
@@ -24,8 +25,8 @@
     }
   }
   .block-content>div{
-    width: 50%;
-    float: left;
+    //width: 50%;
+    //float: left;
     padding-right: 30px;
     @media screen and (max-width: @mobile){
       width: 100%;
@@ -54,6 +55,11 @@
   div.go-down{
     text-align: center;
     width: 100%;
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    margin: auto;
     padding: 0;
     @media screen and (max-width: @mobile){
       display: none;
@@ -63,11 +69,14 @@
     }
   }
   h1{
+    font-size: 34px;
+    text-align: center;
     margin-bottom: 30px;
   }
   .price{
     font-size: 18px;
     margin-bottom: 20px;
+    text-align: center;
     span{
       font-size: 24px;
       font-weight: 700;
@@ -79,7 +88,7 @@
   li{
     // padding-left: 20px;
     display: block;
-    max-width: 350px;
+    //max-width: 350px;
     margin: 6px 0;
     &:before{
       content: "";
@@ -125,6 +134,77 @@ input.square{
 }
 .block-logo{
   // padding-top: 35px;
+}
+#result{
+  padding: 50px 0 60px;
+  .calc-block{
+    padding-top: 90px;
+  }
+}
+#projects-slider{
+  padding-top: 50px;
+  position: relative;
+  &>.owl-controls{
+    .owl-nav{
+      position: initial;
+      &>div{
+        position: absolute;
+        width: auto;
+        color: #fff;
+        padding-top: 14px;
+        background-color: @magenta;
+      }
+    }
+    .owl-dots{
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 50%;
+      margin: auto;
+      text-align: center;
+    }
+    .owl-dot{
+      display: inline-block;
+      vertical-align: middle;
+      width: 10px;
+      height: 10px;
+      background-color: @gray-light-lower;
+      margin: 10px;
+      border-radius: 50%;
+      transition: all 500ms;
+      transform-origin: 50% 50%;
+      &.active{
+        background-color: @magenta;
+        transform: scale(1.8);
+
+      }
+    }
+    .owl-prev{
+      left: 0;
+      top: 0;
+      div{
+        display: inline-block;
+        vertical-align: middle;
+      }
+      span{
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+    .owl-next{
+      right: 0;
+      top: 0;
+      div{
+        display: inline-block;
+        vertical-align: middle;
+      }
+      span{
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+  }
 }
 #about{
   .block-content{
@@ -181,6 +261,7 @@ input.square{
 }
 .project{
   margin-bottom: 60px;
+  position: relative;
   @media screen and (max-width: @mobile){
     margin-bottom: 25px;
   }
@@ -203,10 +284,10 @@ input.square{
     }
   }
   .info{
-    width: ~"calc(40% + 60px)";
-    padding: 30px 0 20px;
-    margin-left: -60px;
-    z-index: 1;
+    width: 40%;
+    padding: 0;
+    //margin-left: -60px;
+    //z-index: 1;
     position: relative;
     @media screen and (max-width: @mobile){
       width: 100%;
@@ -254,7 +335,7 @@ input.square{
   .scroll-block{
     background-color: #fff;
     padding: 40px;
-    max-height: 300px;
+    //max-height: 331px;
     overflow: auto;
     @media screen and (max-width: @mobile){
       display: none;
@@ -288,6 +369,11 @@ input.square{
     .descr{
       background-color: @yellow;
       font-weight: 400;
+      height: 60px;
+      line-height: 1;
+    }
+    .price{
+      height: 160px;
     }
   }
 
@@ -883,6 +969,8 @@ input.square{
     transition: all 500ms;
     line-height: 1;
     opacity: 0;
+    width: 100%;
+    text-align: center;
     #start &:before{
       display: none;
     }
