@@ -37,33 +37,65 @@ $(document).ready(function() {
 
 
 
-  $(".slider").owlCarousel({
+
+
+  var same_height = new HeightControl({
+    adds: -220 // height of summary block
+  });
+
+
+  var project_slider_state = new StateController();
+
+  function hideEmptyProjects(event){
+    var empty = $("#projects-slider").find(".empty");
+    var empty_count = empty.length;
+    var dots = $("#projects-slider").find(".owl-dot").slice(-empty_count);
+    var count = event.item.count;
+    var pos = count - empty_count;
+    dots.css("display", "none");
+    project_slider_state.setMax(pos);
+  }
+
+  $("#btn-next").on('click', function(){
+    if(project_slider_state.next()) {
+      project_slider.trigger("next.owl.carousel", [300, true]);
+    }
+  });
+  $("#btn-prev").on('click', function(){
+    if(project_slider_state.prev()){
+      project_slider.trigger("prev.owl.carousel", [300, true]);
+    }
+  });
+
+  var sliders = $(".slider").owlCarousel({
     items: 1,
     nav: true,
     dots: false,
     // loop: true,
     navText: ['<div></div>','<div></div>'],
     lazyLoad: true,
-  }).on('initialized.owl.carousel',function(){
-    $(window).trigger('resize');
+    onInitialized: function(){
+      $(window).trigger('resize');
+    },
   });
 
-  var same_height = new HeightControl({
-    adds: -220 // height of summary block
-  });
+  var slider_container = $("#projects-slider");
+  slider_container.on('initialized.owl.carousel', hideEmptyProjects);
 
-  $("#projects-slider").owlCarousel({
+  var project_slider = slider_container.owlCarousel({
     items: 1,
-    nav: true,
+    nav: false,
     dots: true,
     loop: false,
     mouseDrag: false,
     touchDrag: false,
-    navText: ['<div></div><span>Предыдущий проект</span>','<span>Следующий проект</span><div></div>']
-  }).on('translate.owl.carousel',function(){
-    $(window).trigger('resize');
+    navText: ['<div></div><span>Предыдущий проект</span>','<span>Следующий проект</span><div></div>'],
+    // onInitialized: hideEmptyProjects,
   });
-
+  project_slider.on('translated.owl.carousel',function(event){
+    $(window).trigger('resize');
+    // hideEmptyProjects(event);
+  });
 
 
   var content_slider = $(".content-slider").owlCarousel({
@@ -436,7 +468,7 @@ function AutoPlay(options){
 
 function Logo(){
   var logo = $("#logo"), logo_el = $("#logo-element"), sections = $("section"), offsets = [];
-  var current_section = 0, classes = ["","svg-sprite--symbols-01","svg-sprite--symbols-02","svg-sprite--symbols-04","svg-sprite--symbols-04","svg-sprite--symbols-05","svg-sprite--symbols-06","svg-sprite--symbols-07","svg-sprite--symbols-08","svg-sprite--symbols-09","svg-sprite--symbols-10"];
+  var current_section = 0, classes = ["","svg-sprite--symbols-01","svg-sprite--symbols-02","svg-sprite--symbols-04","svg-sprite--symbols-04","svg-sprite--symbols-05","svg-sprite--symbols-06","svg-sprite--symbols-07","svg-sprite--symbols-08","svg-sprite--symbols-09"];
 
   var delay = 350;
 
@@ -556,7 +588,7 @@ function HeightControl(config){
   };
   var opts = $.extend(def,config);
 
-  var elements;
+  var self = this, elements, timer;
 
   function init(){
     elements = $(opts.selector);
@@ -575,6 +607,39 @@ function HeightControl(config){
   }
 
   init();
-  this.onResize();
+  $(window).load(function(){
+    self.onResize();
+  });
+}
+
+function StateController(m){
+  var state = 1, max = m;
+
+  this.get = function(){
+    return state;
+  };
+
+  this.set = function(i){
+    state = i;
+  };
+
+  this.setMax = function(i){
+    max = i;
+  };
+
+  this.next = function(){
+    if(state + 1 <= max){
+      ++state;
+      return true;
+    }
+    return false;
+  };
+  this.prev = function(){
+    if(state > 1){
+      --state;
+      return true;
+    }
+    return false;
+  };
 }
 

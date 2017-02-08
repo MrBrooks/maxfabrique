@@ -141,19 +141,72 @@ input.square{
     padding-top: 90px;
   }
 }
-#projects-slider{
-  padding-top: 50px;
+.owl-nav-outer{
   position: relative;
+  z-index: 501;
+  &>div{
+    position: absolute;
+    width: auto;
+    color: #fff;
+    padding: 14px;
+    background-color: @magenta;
+    cursor: pointer;
+  }
+  .owl-prev{
+    left: 0;
+    top: 0;
+    div{
+      display: inline-block;
+      vertical-align: middle;
+    }
+    span{
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+  .owl-next{
+    right: 0;
+    top: 0;
+
+    div{
+      display: inline-block;
+      vertical-align: middle;
+    }
+    span{
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+  &>div{
+    background-color: @magenta;
+    padding: 15px 20px;
+    &:extend(.trall);
+    &:hover{
+      background-color: @magenta-dark;
+    }
+    &>div{
+      width: 15px;
+      height: 15px;
+      border-bottom: 2px solid white;
+      border-left: 2px solid white;
+      transform: rotate(45deg);
+      transform-origin: 50% 50%;
+    }
+  }
+  .owl-next{
+    padding-left: 13px;
+    &>div{
+      transform: rotate(-135deg);
+    }
+  }
+}
+#projects-slider{
+  padding-top: 53px;
+  position: relative;
+  z-index: 500;
   &>.owl-controls{
     .owl-nav{
-      position: initial;
-      &>div{
-        position: absolute;
-        width: auto;
-        color: #fff;
-        padding-top: 14px;
-        background-color: @magenta;
-      }
+
     }
     .owl-dots{
       position: absolute;
@@ -391,6 +444,9 @@ input.square{
     }
     .price{
       height: 160px;
+      p{
+        margin: 0;
+      }
     }
   }
 
