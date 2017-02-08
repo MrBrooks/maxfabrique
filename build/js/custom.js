@@ -577,4 +577,3 @@ function HeightControl(config){
   init();
   this.onResize();
 }
-
