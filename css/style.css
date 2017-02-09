@@ -4415,9 +4415,9 @@ footer .socials div
 }
 .input-text
 {
-    color: white;
+    color: #63666a;
     border: 0;
-    border-bottom: 2px solid white;
+    border-bottom: 3px solid #c5c4c4;
     outline: none;
     background-color: transparent;
     box-shadow: 0;
