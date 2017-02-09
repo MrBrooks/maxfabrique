@@ -6004,6 +6004,10 @@ footer .socials div
 {
     background-color: #00bfb3;
 }
+#art-concepts .btn
+{
+    margin: 30px auto;
+}
 #art-concepts .title
 {
     font-size: 16px;
