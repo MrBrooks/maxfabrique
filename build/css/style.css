@@ -4899,6 +4899,20 @@ footer .socials div
     right: 0;
     bottom: 0;
 }
+@media screen and (max-width: 767px)
+{
+    .only-desktop
+    {
+        display: none;
+    }
+}
+@media screen and (min-width: 767px)
+{
+    .only-mobile
+    {
+        display: none;
+    }
+}
 #start
 {
     margin-bottom: 0;
@@ -4910,7 +4924,7 @@ footer .socials div
 {
     #start
     {
-        margin-bottom: 180px;
+        margin-bottom: 0;
         padding-top: 0;
 
         background-image: none;
@@ -5098,9 +5112,25 @@ footer .socials div
 {
     padding: 50px 0 60px;
 }
+@media screen and (max-width: 767px)
+{
+    #result .title
+    {
+        font-size: 30px;
+
+        text-align: center;
+    }
+}
 #result .calc-block
 {
     padding-top: 90px;
+}
+@media screen and (max-width: 767px)
+{
+    #result .calc-block
+    {
+        padding-top: 30px;
+    }
 }
 .owl-nav-outer
 {
@@ -5118,6 +5148,13 @@ footer .socials div
 
     color: #fff;
     background-color: #e0004d;
+}
+@media screen and (max-width: 767px)
+{
+    .owl-nav-outer > div
+    {
+        width: 50%;
+    }
 }
 .owl-nav-outer .owl-prev
 {
@@ -5140,6 +5177,13 @@ footer .socials div
 {
     top: 0;
     right: 0;
+}
+@media screen and (max-width: 767px)
+{
+    .owl-nav-outer .owl-next
+    {
+        text-align: right;
+    }
 }
 .owl-nav-outer .owl-next div
 {
@@ -5270,6 +5314,13 @@ footer .socials div
 {
     margin-bottom: 60px;
 }
+@media screen and (max-width: 767px)
+{
+    #whatnext .title
+    {
+        text-align: center;
+    }
+}
 #whatnext h4
 {
     font-size: 18px;
@@ -5352,6 +5403,17 @@ footer .socials div
 {
     margin-bottom: 30px;
     padding-left: 80px;
+}
+@media screen and (max-width: 767px)
+{
+    #projects .title
+    {
+        font-size: 30px;
+
+        padding: 0;
+
+        text-align: center;
+    }
 }
 #projects .row > div
 {

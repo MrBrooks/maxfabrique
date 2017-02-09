@@ -56,12 +56,12 @@ $(document).ready(function() {
     project_slider_state.setMax(pos);
   }
 
-  $("#btn-next").on('click', function(){
+  $(".btn-next").on('click', function(){
     if(project_slider_state.next()) {
       project_slider.trigger("next.owl.carousel", [300, true]);
     }
   });
-  $("#btn-prev").on('click', function(){
+  $(".btn-prev").on('click', function(){
     if(project_slider_state.prev()){
       project_slider.trigger("prev.owl.carousel", [300, true]);
     }
@@ -79,6 +79,8 @@ $(document).ready(function() {
     },
   });
 
+
+
   var slider_container = $("#projects-slider");
   slider_container.on('initialized.owl.carousel', hideEmptyProjects);
 
@@ -89,7 +91,6 @@ $(document).ready(function() {
     loop: false,
     mouseDrag: false,
     touchDrag: false,
-    navText: ['<div></div><span>Предыдущий проект</span>','<span>Следующий проект</span><div></div>'],
     // onInitialized: hideEmptyProjects,
   });
   project_slider.on('translated.owl.carousel',function(event){

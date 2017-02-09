@@ -553,3 +553,13 @@ footer{
     right: 0;
   }
 }
+.only-desktop{
+  @media screen and (max-width: @mobile){
+    display: none;
+  }
+}
+.only-mobile{
+  @media screen and (min-width: @mobile){
+    display: none;
+  }
+}

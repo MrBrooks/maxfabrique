@@ -6,7 +6,7 @@
   @media screen and (max-width: @mobile){
     background-image: none;
     padding-top: 0;
-    margin-bottom: 180px;
+    margin-bottom: 0px;
   }
   .col-md-11{
     padding: 0;
@@ -137,9 +137,19 @@ input.square{
 }
 #result{
   padding: 50px 0 60px;
+  .title{
+    @media screen and (max-width: @mobile){
+      text-align: center;
+      font-size: 30px;
+    }
+  }
   .calc-block{
     padding-top: 90px;
+    @media screen and (max-width: @mobile){
+      padding-top: 30px;
+    }
   }
+
 }
 .owl-nav-outer{
   position: relative;
@@ -151,6 +161,9 @@ input.square{
     padding: 14px;
     background-color: @magenta;
     cursor: pointer;
+    @media screen and (max-width: @mobile){
+      width: 50%;
+    }
   }
   .owl-prev{
     left: 0;
@@ -167,7 +180,9 @@ input.square{
   .owl-next{
     right: 0;
     top: 0;
-
+    @media screen and (max-width: @mobile){
+      text-align: right;
+    }
     div{
       display: inline-block;
       vertical-align: middle;
@@ -263,6 +278,9 @@ input.square{
   padding-bottom: 80px;
   .title{
     margin-bottom: 60px;
+    @media screen and (max-width: @mobile){
+      text-align: center;
+    }
   }
   h4{
     font-size: 18px;
@@ -324,6 +342,11 @@ input.square{
   .title{
     margin-bottom: 30px;
     padding-left: 80px;
+    @media screen and (max-width: @mobile){
+      text-align: center;
+      font-size: 30px;
+      padding: 0;
+    }
   }
   .row>div{
     padding: 0;
