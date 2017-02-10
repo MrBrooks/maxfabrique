@@ -19,6 +19,15 @@ $(document).ready(function() {
     $("#preloader").css("top",-100-$(window).height()+"px");
   },10000);
 
+  window.sr = ScrollReveal({ reset: true});
+  sr.reveal('.scroll-animated',{
+    scale: 1.0,
+    distance: '60px',
+    viewFactor: 0.3,
+    duration: 1000,
+    delay: 100,
+  });
+
   $.jMaskGlobals = {
     maskElements: 'input,td,span,div',
     dataMaskAttr: '*[data-mask]',

@@ -12,3 +12,4 @@
 //= ../../bower_components/underscore/underscore-min.js
 //= ../../bower_components/Snap.svg/dist/snap.svg-min.js
 //= ../../bower_components/ajaxSubmit/ajaxSubmit.js
+//= ../../bower_components/scrollreveal/dist/scrollreveal.min.js
