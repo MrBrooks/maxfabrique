@@ -19,7 +19,7 @@ $(document).ready(function() {
     $("#preloader").css("top",-100-$(window).height()+"px");
   },10000);
 
-  window.sr = ScrollReveal({ reset: true});
+  window.sr = ScrollReveal({ reset: false});
   sr.reveal('.scroll-animated',{
     scale: 1.0,
     distance: '60px',
