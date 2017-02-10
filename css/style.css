@@ -5985,6 +5985,10 @@ footer .socials div
 {
     border-color: #e0004d;
 }
+#art-concepts
+{
+    margin-bottom: 80px;
+}
 @media screen and (max-width: 767px)
 {
     #art-concepts
@@ -5992,9 +5996,17 @@ footer .socials div
         margin: 0;
     }
 }
-#art-concepts .block-content
+#art-concepts p
 {
-    background-color: #3d3935;
+    max-width: 50%;
+}
+@media screen and (max-width: 767px)
+{
+    #art-concepts p
+    {
+        max-width: 100%;
+        padding: 0 10px;
+    }
 }
 #art-concepts .owl-nav > div
 {
@@ -6010,16 +6022,14 @@ footer .socials div
 }
 #art-concepts .title
 {
-    font-size: 16px;
-
-    padding: 40px 40px 25px;
+    max-width: 50%;
 }
 @media screen and (max-width: 767px)
 {
     #art-concepts .title
     {
-        padding-right: 15px;
-        padding-left: 15px;
+        max-width: 100%;
+        padding: 0 10px;
     }
 }
 #art-concepts .subtitle
