@@ -761,11 +761,19 @@ input.square{
   }
 }
 #art-concepts{
+  margin-bottom: 80px;
   @media screen and (max-width: @mobile){
     margin: 0;
   }
   .block-content{
-    background-color: @gray-dark;
+    //background-color: @gray-dark;
+  }
+  p{
+    max-width: 50%;
+    @media screen and (max-width: @mobile){
+      max-width: 100%;
+      padding: 0 10px;
+    }
   }
   .owl-nav>div{
     background-color: @cyan;
@@ -777,12 +785,17 @@ input.square{
     margin: 30px auto;
   }
   .title{
-    font-size: 16px;
-    padding: 40px 40px 25px;
+    max-width: 50%;
     @media screen and (max-width: @mobile){
-      padding-left: 15px;
-      padding-right: 15px;
+      max-width: 100%;
+      padding: 0 10px;
     }
+    //font-size: 16px;
+    //padding: 40px 40px 25px;
+    //@media screen and (max-width: @mobile){
+    //  padding-left: 15px;
+    //  padding-right: 15px;
+    //}
   }
   .subtitle{
     text-transform: uppercase;
