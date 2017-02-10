@@ -5,6 +5,7 @@ $(window).load(function(){
   $("#preloader").css("top",-100-$(window).height()+"px");
   $(window).trigger('resize');
   $(window).trigger('scroll');
+  lazyLoad();
 });
 
 $(document).ready(function() {
@@ -642,4 +643,18 @@ function StateController(m){
     }
     return false;
   };
+}
+
+function lazyLoad(){
+  var items = $("[data-src]"), curr = 0;
+
+  items.on('load', loadNext);
+
+  function loadNext(){
+    var src = $(items.get(curr)).attr('data-src');
+    $(items.get(curr)).attr('src',src);
+    curr++;
+  }
+
+  loadNext();
 }
